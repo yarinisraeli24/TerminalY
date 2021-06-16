@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using TerminalY.Data;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace TerminalY
 {
@@ -29,6 +30,17 @@ namespace TerminalY
 
             services.AddDbContext<TerminalYContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("TerminalYContext")));
+
+            services.AddSession(options => options.IdleTimeout = TimeSpan.FromMinutes(2));
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
+
+            services.AddOptions<CookieAuthenticationOptions>(
+                    CookieAuthenticationDefaults.AuthenticationScheme)
+            .Configure((options) =>
+            {
+                options.LoginPath = "/Accounts/Login";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,7 +61,11 @@ namespace TerminalY
 
             app.UseRouting();
 
+            app.UseSession();
+
             app.UseAuthorization();
+
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {

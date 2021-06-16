@@ -118,7 +118,8 @@ body {
     height: 2rem;
     border-radius:100px;
 }
-.search_submit,.search_submit::after {
+
+    .search_submit,.search_submit::after {
     border: none;
     outline:none;
 }
@@ -187,6 +188,12 @@ body {
     padding: 0 19px;
     outline: none;
     background: #f0f0f0;
+    border: 2px solid black;
+}
+
+.header-search-form > input:focus{
+    background: #fff;
+    border: 2px solid black;
 }
 
 .header-search-form button {
@@ -201,9 +208,13 @@ body {
     background-color: transparent;
 }
 
+.user-panel{
+    width: 100%;
+}
+
 .user-panel .up-item, .up-item::after {
     display: inline-block;
-    font-size: 32px;
+    font-size: 18px;
     text-decoration: none;
     margin: auto;
 }
@@ -211,7 +222,6 @@ body {
 .user-panel .up-item i {
     font-size: 22px;
     text-decoration: none;
-    margin-right: 2rem;
 }
 
 .up-item:hover {
@@ -222,7 +232,6 @@ body {
     font-size: 14px;
     color: #000;
     text-decoration: none;
-    margin-right: 2rem;
 }
 
 .user-panel .up-item:first-child {
@@ -302,7 +311,7 @@ main-menu ul{
 }
 
 .main-menu li:hover > a {
-    color: #f51167;
+    color: rebeccapurple;
 }
 
 .main-menu .sub-menu {

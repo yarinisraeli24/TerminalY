@@ -223,7 +223,6 @@ namespace TerminalY.Controllers
         {
             var claims = new List<Claim>
             {
-
                 new Claim(ClaimTypes.Email, user.Username),
                 new Claim("Name", user.Name),
                 new Claim(ClaimTypes.Role, user.Role.ToString()),
