@@ -15,5 +15,9 @@ namespace TerminalY.Data
         }
 
         public DbSet<TerminalY.Models.Account> Account { get; set; }
+
+        public DbSet<TerminalY.Models.Category> Category { get; set; }
+
+        public DbSet<TerminalY.Models.Product> Product { get; set; }
     }
 }

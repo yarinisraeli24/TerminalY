@@ -63,8 +63,8 @@ button.accept-policy {
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
@@ -590,4 +590,50 @@ main-menu ul{
     display: inline-block;
     font-size: 14px;
     color: #414141;
+}
+
+
+/* --------------
+  Shop Pages
+------------------*/
+ul{
+    padding: 0;
+}
+
+.list-wrapper{
+    margin: 2rem 0;
+}
+
+.categories-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.categories-list{
+    list-style: none;
+    border: 2px solid black;
+    box-shadow: 5px 5px 10px;
+}
+
+.categories-list li, .categories-list a {
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 1rem;
+    transform: translate();
+    color: black;
+    border-radius: 100px;
+    width: 100%;
+}
+
+.categories-list li:hover {
+    font-size: 20px;
+    transition: 1s;
+}
+
+.slider-container{
+    margin: 4rem 0;
+}
+
+.slider-container input {
+    margin: auto;
+    width: 100%;
 }
