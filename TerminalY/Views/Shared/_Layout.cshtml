@@ -33,6 +33,7 @@
                             @{ var name = Context.User.Claims.FirstOrDefault(c => c.Type == "Name")?.Value;
                                 if (name != null)
                                 {
+                                    <span>test</span>
                                     <div class="up-item">
                                         <i class="flaticon-profile icon"></i>
                                         <span>@name</span>
@@ -42,8 +43,8 @@
                                             <i class="flaticon-bag icon"></i>
                                             @*<span>0</span>*@
                                         </div>
-                                        <a asp-action="CartDetails" asp-controller="Carts">Shopping Cart</a> &nbsp; &nbsp;
-                                    </div>
+                                        <!--<a asp-action="CartDetails" asp-controller="Carts">Shopping Cart</a> &nbsp; &nbsp;
+                                   --> </div>
                                     <div class="up-item">
                                         <i class="flaticon-logout icon"></i>
                                         <a asp-action="LogOut" asp-controller="Accounts">Log Out</a>
