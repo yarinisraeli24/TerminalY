@@ -317,3 +317,14 @@ C:\Users\Mali\Des\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Products\Deta
 C:\Users\Mali\Des\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Products\Edit.cshtml.g.cs
 C:\Users\Mali\Des\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Products\Index.cshtml.g.cs
 C:\Users\Mali\Des\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Categories\Shop.cshtml.g.cs
+C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Categories\Create.cshtml.g.cs
+C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Categories\Delete.cshtml.g.cs
+C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Categories\Details.cshtml.g.cs
+C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Categories\Edit.cshtml.g.cs
+C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Categories\Index.cshtml.g.cs
+C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Categories\Shop.cshtml.g.cs
+C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Products\Create.cshtml.g.cs
+C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Products\Delete.cshtml.g.cs
+C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Products\Details.cshtml.g.cs
+C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Products\Edit.cshtml.g.cs
+C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Products\Index.cshtml.g.cs
