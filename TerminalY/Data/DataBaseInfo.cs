@@ -9,6 +9,8 @@ using System.Numerics;
 using System.Threading.Tasks;
 using TerminalY.Data;
 
+
+
 namespace TerminalY.Data
 {
     public class DataBaseInfo
@@ -56,7 +58,9 @@ namespace TerminalY.Data
                     "Forward Reverse Time: 15 Seconds / Ultrasonic Working Time: 60 Seconds Switching " +
                     "Size: 17 x 17 x 17 cm / Housing and Tub Material: Plastic / Capacity: 2.1 - 4.5 kgs per load " +
                     "Package Content: Portable Washing Machine and Dryer",
-                    Price = 75,Category=categories[0]},
+                    Price = 75,Category=categories[0],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                },
 
                 new Product{Name ="Umbrella Cap Hands-Free Umbrella Hat", Created = DateTime.Today,
                     Description = "Hands-free, lightweight, and durable, it is easy to store and carry" +
@@ -65,7 +69,9 @@ namespace TerminalY.Data
                     "Materials: Silver Plasters and Steel; Number of ribs: 7 bones; Umbrella density: 170T; Net Weight: 120g/ 4.23oz" +
                     "For a list of sizes and measurements, please scroll down to the description area to find the sizing chart" +
                     "Package Includes:" +
-                    "1 x Umbrella Cap Hands-Free Umbrella Hat",Price = 20,Category=categories[0] },
+                    "1 x Umbrella Cap Hands-Free Umbrella Hat",Price = 20,Category=categories[0],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                },
 
                 new Product{Name ="Bluetooth Beanie Hat Headset Cap", Created = DateTime.Today,
                     Description = "Listen to your favorite music while wearing this Bluetooth beanie hat" +
@@ -75,7 +81,9 @@ namespace TerminalY.Data
                     "Charging time: 2hrs / Bluetooth talk time: 3-6hrs / Sensitivity: 120±5dBdB / Resistance: 16ΩΩ" +
                     "Package Contents:" +
                     "1 x Bluetooth Beanie Hat Headset Cap" +
-                    "1 x USB Charging Cable" , Price = 29,Category=categories[0] },
+                    "1 x USB Charging Cable" , Price = 29,Category=categories[0],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                },
 
                 new Product{Name ="Women’s Urinal Portable Funnel", Created = DateTime.Today,
                     Description = "This Women’s Urinal is lightweight and portable so it is perfect for traveling" +
@@ -84,7 +92,9 @@ namespace TerminalY.Data
                     "Material: TPR" +
                     "Size: 10 x 15 cm / Net Weight: 21g" +
                     "Package Contents:" +
-                    "1 x Women’s Urinal", Price = 16,Category=categories[0] } ,
+                    "1 x Women’s Urinal", Price = 16,Category=categories[0],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                },
                 new Product{Name ="Collapsible Bathtub Adult Size", Created = DateTime.Today,
                  Description = "An adult-size foldable bathtub with a headrest and side handles" +
                                 "It has grooves on its base that prevent the user from slipping; Sturdy legs keep it upright and prevents wobbling" +
@@ -94,7 +104,9 @@ namespace TerminalY.Data
                                 "Large: 138 x 62 x 52cm (With/Without Lid)" +
                                 "Small: 120 x 62 x 52cm (With/Without Lid)" +
                                 "Package Content:" +
-                                "1 x Collapsible Bathtub",Price=815,Category=categories[0]},
+                                "1 x Collapsible Bathtub",Price=815,Category=categories[0],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                },
 
                  new Product{Name ="Shower LED Light 7-Color Head", Created = DateTime.Today,
                  Description= "This Shower LED Light makes bathtimes even more special and relaxing" +
@@ -104,7 +116,9 @@ namespace TerminalY.Data
                                 "Length: 215mm / Thickness: 38mm" +
                                 "Exterior Thread Size: 20mm (universal)" +
                                 "Package Contents:" +
-                                "1 x Shower LED Light", Price=29,Category=categories[1] },
+                                "1 x Shower LED Light", Price=29,Category=categories[1],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                },
 
                  new Product{Name ="Portable Picture Printer Device ", Created = DateTime.Today,
                              Description= "Print your favorite photos on your phone instantly using this portable picture printer" +
@@ -120,7 +134,9 @@ namespace TerminalY.Data
                                             "Bundle 2:" +
                                             "1 x Portable Picture Printer Device" +
                                             "1 x User Menu" +
-                                            "20 x Photo Paper", Price=125,Category=categories[1] },
+                                            "20 x Photo Paper", Price=125,Category=categories[1],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                },
                  new Product{Name ="Portable Small Bluetooth Keyboard ", Created = DateTime.Today,
                             Description="A wireless Bluetooth keyboard with a built-in Li-ion rechargeable battery" +
                                         "Slim, lightweight, portable, and with 49 alphanumeric keys" +
@@ -129,7 +145,9 @@ namespace TerminalY.Data
                                         "Package content:" +
                                         "1 x Portable Small Bluetooth Keyboard" +
                                         "1 x Charging Cable" +
-                                        "1 x user Manual", Price=42,Category=categories[1] },
+                                        "1 x user Manual", Price=42,Category=categories[1],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                },
 
                  new Product{Name ="Phone Sterilizer UV Light Sanitizing Box ", Created = DateTime.Today,
                  Description= "Keep your phone clean and free from germs and bacteria by using this phone sterilizer" +
@@ -140,7 +158,9 @@ namespace TerminalY.Data
                                 "Product size: 218mm x 122mm x 23mm / Product weight: 300g" +
                                 "Package Content:" +
                                 "1 x Phone Sterilizer UV Light Sanitizing Box" +
-                                "1 x USB Cable",Price=45,Category=categories[1] },
+                                "1 x USB Cable",Price=45,Category=categories[1],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                },
                  new Product{Name ="Baby Shoulder Carrier Saddle Seat", Created = DateTime.Today,
                              Description= "This baby shoulder carrier provides safe and convenient baby/kid carrying on your shoulders" +
                                             "It has a comfortable seat, a secure chest strap with a snap buckle, and two straps for the legs" +
@@ -148,7 +168,9 @@ namespace TerminalY.Data
                                             "Maximum Carrying Capacity: 20 kgs / Suitable Age: 3 and Above" +
                                             "Adjustable Bust Size: 78 – 131 cm" +
                                             "Package Content:" +
-                                            "1 x Baby Shoulder Carrier", Price=59,Category=categories[2] },
+                                            "1 x Baby Shoulder Carrier", Price=59,Category=categories[2],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                },
 
                     new Product{Name ="Baby Sun Tent Outdoor Sunshade", Created = DateTime.Today,
                                 Description= "Protect your kids from the sun while still letting them enjoy the fine sunny beach, use this baby sun tent" +
@@ -158,7 +180,9 @@ namespace TerminalY.Data
                                                 "Storage Bag: Polyester Bag" +
                                                 "Package Content:" +
                                                 "1 x Baby Sun Tent" +
-                                                "4 x Ground Nails", Price=40,Category=categories[2] },
+                                                "4 x Ground Nails", Price=40,Category=categories[2],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                },
                     new Product{Name ="Finger Baby Brush Silicone Toothbrush", Created = DateTime.Today,
                                 Description= "This toothbrush is a silicone finger toothbrush with soft bristles. It’s gentle and very safe to use on your baby’s sensitive teeth and gums" +
                                             "Use it to remove milk residue, vegetable and fruit particles that get stuck on your baby’s little teeth" +
@@ -166,7 +190,9 @@ namespace TerminalY.Data
                                             "Material: Silicone / Net Weight: 13.5g" +
                                             "Container Size: 7 x 4 x 3cm (L x W x H) / Size: 5.5 x 2.3 cm (L x D)" +
                                             "Package Content:" +
-                                            "1 x Finger Toothbrush + 1 x Toothbrush Container", Price=15,Category=categories[2] },
+                                            "1 x Finger Toothbrush + 1 x Toothbrush Container", Price=15,Category=categories[2],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                },
                     new Product{Name ="Baby Burrito Blanket Swaddle Wrap", Created = DateTime.Today,
                                 Description= "The burrito blanket is a swaddle and blanket in a tortilla wrapper design" +
                                             "It has flour dough-like color and it even has burnt marks that make it look realistic" +
@@ -175,7 +201,9 @@ namespace TerminalY.Data
                                             "Size: 85cm / 33.4 “/ Suitable for babies 0-3 months old" +
                                             "Package Content:" +
                                             "1 x Swaddle Blanket" +
-                                            "1 x Hat", Price=28,Category=categories[2] },
+                                            "1 x Hat", Price=28,Category=categories[2],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                },
                      new Product{Name ="Dog Trolley Pet Carrier Luggage", Created = DateTime.Today,
                                 Description="A pet-friendly and ergonomically-designed trolley suitable for carrying cats and small breed dogs" +
                                             "The handle is foldable and expandable, it has an easy-carry grip, and universal wheels that turn 360 degrees" +
@@ -188,7 +216,9 @@ namespace TerminalY.Data
                                             "1 x Bubble Window" +
                                             "1 x Fixed Ring" +
                                             "1 x Honeycomb Cover" +
-                                            "1 x Washable Mat/Pad", Price=299,Category=categories[3] },
+                                            "1 x Washable Mat/Pad", Price=299,Category=categories[3],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                },
 
                      new Product{Name ="Sanitizer Bracelet Alcohol Dispenser Wristband", Created = DateTime.Today,
                              Description = "This sanitizer bracelet is a wristband that you can refill with alcohol or sanitizer" +
@@ -198,7 +228,9 @@ namespace TerminalY.Data
                                             "Material: Silicone / Capacity: 10 ml" +
                                             "Size: 68 x 63 x 20 mm / Weight: 9 g / Elastic, Adult Size, Unisex (Sanitizer NOT Included)" +
                                             "Package Contents:" +
-                                            "1 x Sanitizer Bracelet + 1 x Squeeze Pump Bottle" , Price = 17,Category=categories[3]},
+                                            "1 x Sanitizer Bracelet + 1 x Squeeze Pump Bottle" , Price = 17,Category=categories[3],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                },
 
                      new Product{Name ="Penguin Egg Holder Boiling Tool", Created = DateTime.Today,
                                 Description = "This penguin egg holder holds the eggs in place while it boils so they cook evenly and crack-free" +
@@ -207,7 +239,9 @@ namespace TerminalY.Data
                                                 "It can hold six eggs at a time" +
                                                 "Material: PP / Size: 14.6 x 12.1 x 12.4 cm" +
                                                 "Package Content:" +
-                                                "1 x Penguin Egg Holder (6 Slots)" , Price = 24,Category=categories[3]},
+                                                "1 x Penguin Egg Holder (6 Slots)" , Price = 24,Category=categories[3],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                },
 
                       new Product{Name ="Cleaning Slippers Floor Mop Flip-Flops", Created = DateTime.Today,
                                   Description ="Clean your floor with every step and keep it shiny by wearing these cleaning slippers" +
@@ -215,7 +249,9 @@ namespace TerminalY.Data
                                                 "The slippers are soft and comfortable and covers your toes as well" +
                                                 "Material: Coral Fleece + Chenille" +
                                                 "Package Contents:" +
-                                                "2 x Cleaning Slippers Floor Mop Flip-Flops (1 Pair)" , Price = 23,Category=categories[3] },
+                                                "2 x Cleaning Slippers Floor Mop Flip-Flops (1 Pair)" , Price = 23,Category=categories[3],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                },
 
                       new Product{Name ="Men’s Gym Shorts with Inner Spandex Shorts", Created = DateTime.Today,
                                   Description = "A two-layered short composed of stretchable inner spandex and a quick-drying outer polyester short" +
@@ -226,7 +262,9 @@ namespace TerminalY.Data
                                                 "Inner Material: Spandex / Outer Material: Polyester / For Adult Men" +
                                                 "For a list of sizes and measurements, please scroll down to the description area to find the sizing chart" +
                                                 "Package Content:" +
-                                                "1 x Men’s Gym Shorts" , Price = 32,Category=categories[4] },
+                                                "1 x Men’s Gym Shorts" , Price = 32,Category=categories[4],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                },
 
                        new Product{Name ="Human Bubble Ball Inflatable Bump Ball", Created = DateTime.Today,
                                    Description ="The human bumper ball is an inflatable bumper ball that you wear on your upper body; It’s a fun outdoor game that you can play in pair and in teams" +
@@ -234,7 +272,9 @@ namespace TerminalY.Data
                                                 "High-quality air vent prevents the air from leaking" +
                                                 "Material: 0.8mm PVC / Size: 150 cm" +
                                                 "Package Content:" +
-                                                "1 x Bumper Ball", Price = 225,Category=categories[4] },
+                                                "1 x Bumper Ball", Price = 225,Category=categories[4],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                },
 
                         new Product{Name ="Portable Neck Fan Rechargeable Double Head Fan", Created = DateTime.Today,
                                     Description = "This is wearable and rechargeable neck fan with two fan heads" +
@@ -244,7 +284,9 @@ namespace TerminalY.Data
                                                     "Battery Life: 2-6 Hours / Consumption: 0.3-1.2W / Battery: 18650 Battery – 3.7V" +
                                                     "Size: 26 x 16cm / Weight: 180g" +
                                                     "Package Content:" +
-                                                    "1x Portable Neck Fan" , Price = 36,Category=categories[4] },
+                                                    "1x Portable Neck Fan" , Price = 36,Category=categories[4],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                },
 
                          new Product{Name ="Mist Spray Water Bottle Sports Bottle", Created = DateTime.Today,
                                      Description = "Use this mist spray water to keep you energized when you are playing sports or working out" +
@@ -254,11 +296,17 @@ namespace TerminalY.Data
                                                     "740ML" +
                                                     "Material: Tritan" +
                                                     "Package Content:" +
-                                                    "1 x Mist Spray Water Bottle Sports Bottle" , Price = 29,Category=categories[4] } };
+                                                    "1 x Mist Spray Water Bottle Sports Bottle" , Price = 29,Category=categories[4],
+                    Image="https://images.unsplash.com/photo-1585036156404-f11b0f784515?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+                }
+            };
+
             foreach(Product p in products)
             {
                 context.Product.Add(p);
             }
+            context.SaveChanges();
+
 
             DateTime[] dateTimes = new DateTime[]
             {
@@ -285,7 +333,8 @@ namespace TerminalY.Data
                 context.Account.Add(a);
             }
 
-        
+            context.SaveChanges();
+
 
             var orders = new Order[]
             {
@@ -301,17 +350,18 @@ namespace TerminalY.Data
             {
                 context.Order.Add(o);
             }
+
+            context.SaveChanges();
+
             OrderItem[] orderItems = new OrderItem[]
-     {
+                {
                 new OrderItem{ Quantity=2, Product=products[0], Order=orders[0], Price=3455 },
                 new OrderItem{ Quantity=1, Product=products[1], Order=orders[0],Price=43 },
                 new OrderItem{ Quantity=1, Product=products[7], Order=orders[1], Price=4545 },
                 new OrderItem{ Quantity=3, Product=products[3], Order=orders[2], Price=47778 },
                 new OrderItem{ Quantity=1, Product=products[9], Order=orders[2], Price=438 },
                 new OrderItem{ Quantity=1, Product=products[14], Order=orders[3], Price=8676 }
-
-
-     };
+                };
             foreach (OrderItem oi in orderItems)
 
             {
@@ -320,8 +370,8 @@ namespace TerminalY.Data
 
             context.SaveChanges();
 
-            }        
-   }
+        }        
+    }
                 
 }
 

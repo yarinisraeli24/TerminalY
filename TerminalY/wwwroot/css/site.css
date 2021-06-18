@@ -637,3 +637,7 @@ ul{
     margin: auto;
     width: 100%;
 }
+
+.card{
+    border: 2px solid black;
+}
