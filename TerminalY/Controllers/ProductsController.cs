@@ -46,6 +46,7 @@ namespace TerminalY.Controllers
         // GET: Products/Create
         public IActionResult Create()
         {
+            ViewData["products"] = new SelectList(_context.Product.Where(x => x.Category == null), nameof(Product.Id), nameof(Product.Name));
             return View();
         }
 
