@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,144 +19,36 @@ namespace TerminalY.Controllers
         {
             _context = context;
         }
-
-        // GET: Categories
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Store(string? id)
         {
-            return View(await _context.Category.ToListAsync());
-        }
+            var category = new Category();
+            ViewBag.Categories = new ArrayList(_context.Category.ToList());
 
-        // GET: Categories/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
+            var isValidId = int.TryParse(id, out int categoryId);
+
             if (id == null)
             {
-                return NotFound();
+                category = await _context.Category
+                    .Include(p => p.Products)
+                    .FirstAsync();
+                return Redirect("/Categories/Store/" + category.Id.ToString());
             }
-
-            var category = await _context.Category
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (category == null)
+            else if (!isValidId)
             {
-                return NotFound();
+                throw new Exception("Id is not valid");
             }
-
-            return View(category);
-        }
-
-        // GET: Categories/Create
-        public IActionResult Create()
-        {
-            ViewData["categories"] = new SelectList(_context.Category, nameof(Category.Id), nameof(Category.Name));
-            return View();
-        }
-
-        // POST: Categories/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name")] Category category, int[] products)
-        {
-            if (ModelState.IsValid)
+            else
             {
-                category.Products = new List<Product>();
-                category.Products.AddRange(_context.Product.Where(x => products.Contains(x.Id)));
-                _context.Add(category);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(category);
-        }
-
-        // GET: Categories/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var category = await _context.Category.FindAsync(id);
-            if (category == null)
-            {
-                return NotFound();
-            }
-            return View(category);
-        }
-
-        // POST: Categories/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Category category)
-        {
-            if (id != category.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
+                category = await _context.Category
+                    .Include(p => p.Products)
+                    .FirstOrDefaultAsync(m => m.Id == categoryId);
+                if (category == null)
                 {
-                    _context.Update(category);
-                    await _context.SaveChangesAsync();
+                    return NotFound();
                 }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!CategoryExists(category.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(category);
-        }
-
-        // GET: Categories/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
             }
 
-            var category = await _context.Category
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (category == null)
-            {
-                return NotFound();
-            }
-
-            return View(category);
-        }
-
-        // POST: Categories/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var category = await _context.Category.FindAsync(id);
-            _context.Category.Remove(category);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool CategoryExists(int id)
-        {
-            return _context.Category.Any(e => e.Id == id);
-        }
-        //added functions
-        public IActionResult Shop()
-        {
-            return View();
+            return View(category.Products);
         }
     }
 }
