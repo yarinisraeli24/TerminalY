@@ -46,6 +46,7 @@ namespace TerminalY.Controllers
         // GET: Categories/Create
         public IActionResult Create()
         {
+            ViewData["categories"] = new SelectList(_context.Category, nameof(Category.Id), nameof(Category.Name));
             return View();
         }
 
@@ -54,10 +55,12 @@ namespace TerminalY.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name")] Category category)
+        public async Task<IActionResult> Create([Bind("Id,Name")] Category category, int[] products)
         {
             if (ModelState.IsValid)
             {
+                category.Products = new List<Product>();
+                category.Products.AddRange(_context.Product.Where(x => products.Contains(x.Id)));
                 _context.Add(category);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
