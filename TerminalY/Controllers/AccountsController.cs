@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TerminalY.Data;
 using TerminalY.Models;
-using Microsoft.AspNetCore.Http;
-using System.Security.Claims;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication;
-
 
 namespace TerminalY.Controllers
 {
@@ -155,7 +153,7 @@ namespace TerminalY.Controllers
             return _context.Account.Any(e => e.Id == id);
         }
 
-        //added functions
+        //added functions 
         public IActionResult Register()
         {
             return View();
@@ -259,3 +257,4 @@ namespace TerminalY.Controllers
 
     }
 }
+

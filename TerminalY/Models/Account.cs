@@ -19,7 +19,7 @@ namespace TerminalY.Models
     {
         public int Id { get; set; }
         [Required]
-        [DisplayName("Ëmail")]
+        [DisplayName("Email")]
         [EmailAddress]
         public string Username { get; set; }
         [DataType(DataType.Password)]
@@ -35,6 +35,8 @@ namespace TerminalY.Models
         public DateTime BirthDate { get; set; }
         [DataType(DataType.DateTime)]
         public DateTime Registered { get; set; }
+        public List<Order> Orders { get; set; }
+        public Cart Cart { get; set; }
         public Role Role { get; set; }
     }
 }

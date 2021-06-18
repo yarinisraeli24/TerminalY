@@ -149,8 +149,7 @@ namespace TerminalY.Controllers
         {
             return _context.Category.Any(e => e.Id == id);
         }
-
-        //Add functions
+        //added functions
         public IActionResult Shop()
         {
             return View();

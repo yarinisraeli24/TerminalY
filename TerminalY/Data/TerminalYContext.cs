@@ -19,5 +19,15 @@ namespace TerminalY.Data
         public DbSet<TerminalY.Models.Category> Category { get; set; }
 
         public DbSet<TerminalY.Models.Product> Product { get; set; }
+
+        public DbSet<TerminalY.Models.Cart> Cart { get; set; }
+
+        public DbSet<TerminalY.Models.CartItem> CartItem { get; set; }
+
+        public DbSet<TerminalY.Models.Contact> Contact { get; set; }
+
+        public DbSet<TerminalY.Models.Order> Order { get; set; }
+
+        public DbSet<TerminalY.Models.OrderItem> OrderItem { get; set; }
     }
 }
