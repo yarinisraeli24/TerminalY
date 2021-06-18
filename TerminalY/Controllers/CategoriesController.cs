@@ -19,7 +19,7 @@ namespace TerminalY.Controllers
         {
             _context = context;
         }
-        public async Task<IActionResult> Store(string? id)
+        public async Task<IActionResult> Shop(string? id)
         {
             var category = new Category();
             ViewBag.Categories = new ArrayList(_context.Category.ToList());
