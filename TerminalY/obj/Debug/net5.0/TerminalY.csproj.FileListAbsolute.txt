@@ -208,3 +208,4 @@ C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\TerminalY.
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\ref\TerminalY.dll
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\TerminalY.pdb
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\TerminalY.genruntimeconfig.cache
+C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\TerminalY.csproj.AssemblyReference.cache
