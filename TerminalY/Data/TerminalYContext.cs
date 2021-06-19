@@ -14,6 +14,9 @@ namespace TerminalY.Data
         {
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+        }
         public DbSet<TerminalY.Models.Account> Account { get; set; }
 
         public DbSet<TerminalY.Models.Category> Category { get; set; }
