@@ -51,7 +51,7 @@ namespace TerminalY.Controllers
             }
             if (ModelState.IsValid)
             {
-                //account.Cart = new Cart();
+                account.Cart = new Cart();
                 account.Registered = DateTime.Now;
                 account.Role = (Role)1;
                 _context.Add(account);
