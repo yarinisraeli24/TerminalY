@@ -1,13 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\TerminalY",
-    "\\TerminalY\\Controllers",
-    "\\TerminalY\\Models",
-    "\\TerminalY\\Views",
-    "\\TerminalY\\Views\\Accounts",
-    "\\TerminalY\\Views\\Categories",
-    "\\TerminalY\\Views\\Products"
+    ""
   ],
   "SelectedNode": "\\TerminalY.sln",
   "PreviewInSolutionExplorer": false

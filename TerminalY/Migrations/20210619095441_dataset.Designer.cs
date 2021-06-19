@@ -10,8 +10,8 @@ using TerminalY.Data;
 namespace TerminalY.Migrations
 {
     [DbContext(typeof(TerminalYContext))]
-    [Migration("20210618122331_init")]
-    partial class init
+    [Migration("20210619095441_dataset")]
+    partial class dataset
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

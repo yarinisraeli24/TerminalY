@@ -13,8 +13,8 @@ using TerminalY.Models;
 
 namespace TerminalY.Controllers
 {
-    [Authorize(Roles = "Admin")]
-    public class AdminController : Controller
+/*    [Authorize(Roles = "Admin")]
+*/    public class AdminController : Controller
     {
         private readonly TerminalYContext _context;
 

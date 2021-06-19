@@ -19,7 +19,7 @@ namespace TerminalY.Controllers
         {
             _context = context;
         }
-        public async Task<IActionResult> Store(string? id)
+        public async Task<IActionResult> Shop(string? id)
         {
             var category = new Category();
             ViewBag.Categories = new ArrayList(_context.Category.ToList());
@@ -31,7 +31,7 @@ namespace TerminalY.Controllers
                 category = await _context.Category
                     .Include(p => p.Products)
                     .FirstAsync();
-                return Redirect("/Categories/Store/" + category.Id.ToString());
+                return Redirect("/Categories/Shop/" + category.Id.ToString());
             }
             else if (!isValidId)
             {
