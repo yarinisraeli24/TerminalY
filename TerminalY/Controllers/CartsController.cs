@@ -50,6 +50,43 @@ namespace TerminalY.Controllers
 
             return View(cart);
         }
+        [HttpPost]
+        public async Task<double[]> Plus(int id)
+        {
+            var query = await _context.CartItem.Include(p => p.Product).FirstOrDefaultAsync(s => s.Id == id);
+            if (query != null)
+            {
+                query.Quantity += 1;
+                query.Price = query.Product.Price * query.Quantity;
+                await _context.SaveChangesAsync();
+                await UpdateSumToPay(query.Product.Price);
+            }
+            double[] arr = { query.Price, query.Cart.TotalPrice };
+            return arr;
+        }
+
+        [HttpPost]
+        public async Task<double[]> Minus(int id)
+        {
+            var query = await _context.CartItem.Include(p => p.Product).FirstOrDefaultAsync(s => s.Id == id);
+            if (query != null)
+            {
+                query.Quantity -= 1;
+                query.Price = query.Product.Price * query.Quantity;
+                await _context.SaveChangesAsync();
+                await UpdateSumToPay(-query.Product.Price);
+            }
+            double[] arr = { query.Price, query.Cart.TotalPrice };
+            return arr;
+        }
+        public async Task UpdateSumToPay(double price)
+        {
+            var user = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+            var cart = await _context.Cart.FirstOrDefaultAsync(s => s.Account.Username == user);
+            //if cart==null  TODO
+            cart.TotalPrice += price;
+            await _context.SaveChangesAsync();
+        }
 
     }
 }
