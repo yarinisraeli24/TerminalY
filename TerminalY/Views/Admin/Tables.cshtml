@@ -1,0 +1,24 @@
+﻿@model TerminalY.Models.Admin
+
+@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Admin";
+}
+
+<!-- MAIN CONTENT-->
+<div class="main-content">
+    <div class="section__content section__content--p30">
+        <div class="container-fluid">
+            @{ ViewBag.Show = "true";}
+            @await Html.PartialAsync("../Admin/Accounts/Index.cshtml", Model.Accounts)
+            @await Html.PartialAsync("../Admin/Categories/Index.cshtml", Model.Categories)
+            @await Html.PartialAsync("../Admin/Products/Index.cshtml", Model.Products)
+            @await Html.PartialAsync("../Admin/Contacts/Index.cshtml", Model.Contacts)
+            @await Html.PartialAsync("../Admin/Carts/Index.cshtml", Model.Carts)
+            @await Html.PartialAsync("../Admin/CartItems/Index.cshtml", Model.CartItems)
+            @await Html.PartialAsync("../Admin/Orders/Index.cshtml", Model.Orders)
+            @await Html.PartialAsync("../Admin/OrderItems/Index.cshtml", Model.OrderItems)
+        </div>
+    </div>
+</div>
+<!-- END MAIN CONTENT-->

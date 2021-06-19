@@ -36,8 +36,6 @@ namespace TerminalY.Controllers
                 if (c == null)
                     return NotFound();
                 id = c.Id;
-
-
             }
 
             var cart = await _context.Cart
