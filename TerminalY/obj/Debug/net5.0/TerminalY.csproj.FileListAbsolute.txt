@@ -420,3 +420,4 @@ C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\TerminalY.dll
 C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\ref\TerminalY.dll
 C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\TerminalY.pdb
 C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\TerminalY.genruntimeconfig.cache
+C:\Users\USER\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Products\SearchProducts.cshtml.g.cs

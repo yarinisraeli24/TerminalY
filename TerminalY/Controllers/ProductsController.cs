@@ -37,7 +37,12 @@ namespace TerminalY.Controllers
 
             return View(product);
         }
-
+        public async Task<IActionResult> SearchProducts(string term)
+        {
+            var products = await _context.Product.Where(s => s.Name.Contains(term) || s.Description.Contains(term)).ToListAsync();
+            TempData["term"] = term;
+            return View(products);
+        }
         private bool ProductExists(int id)
         {
             return _context.Product.Any(e => e.Id == id);
