@@ -2,46 +2,9 @@
 
 @{ ViewData["Title"] = "Shop"; }
 
-<<<<<<< HEAD
-<div class="container">
-    <div class="row">
-        <div class="col-lg-3 order-2 order-lg-1 list-wrapper">
-            <div class="categories-header">
-                <h3>Categories</h3>
-            </div>
-            <ul class="categories-list">
-                <li>
-                    <a href="#home"><span>Shorts</span></a>
-                </li>
-                <li>
-                    <a href="#anch1" data-scroll>
-                        <span>T-Shirts</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#anch2" data-scroll>
-                        <span>Tights</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#anch3" data-scroll>
-                        <span>Sleeveless</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#anch4" data-scroll>
-                        <span>Shoes</span>
-                    </a>
-                </li>
-            </ul>
-
-            <div class="slider-container">
-                <input class="slider" type="range" min="1" max="1000" value="1000">
-                <p>Price: <span id="price"></span>$</p>
-=======
 <div class="site-pagination">
-      <a asp-action="Index" asp-controller="Home">Home</a> /
-      <a asp-action="Categories" asp-controller="Shop">Shop</a> 
+    <a asp-action="Index" asp-controller="Home">Home</a> /
+    <a asp-action="Categories" asp-controller="Shop">Shop</a>
 </div>
 <!-- Page info end -->
 <!-- Category section -->
@@ -82,53 +45,27 @@
                 <div class="row" id="tbody">
                     @foreach (var product in Model)
                     {
-                        <div class="col-lg-4 col-sm-6">
-                            <div class="product-item">
-                                <div class="pi-pic">
-                                    <a asp-action="Details" asp-controller="Products" asp-route-id="@product.Id">
-                                        @if (product.Image != null)
-                                        {
-                                            <img src="@product.Image">
-                                        }
-                                    </a>
-                                </div>
-                                <div class="pi-text">
-                                    <a asp-action="Details" asp-controller="Products" asp-route-id="@product.Id">
-                                        <h6>$@Html.DisplayFor(model => product.Price),00</h6>
-                                        <p>@Html.DisplayFor(model => product.Name)</p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    }
+        <div class="col-lg-4 col-sm-6">
+            <div class="product-item">
+                <div class="pi-pic">
+                    <a asp-action="Details" asp-controller="Products" asp-route-id="@product.Id">
+                        @if (product.Image != null)
+                        {
+        <img src="@product.Image" height="400" width="300">}
+                    </a>
+                </div>
+                <div class="pi-text">
+                    <a asp-action="Details" asp-controller="Products" asp-route-id="@product.Id">
+                        <h6>$@Html.DisplayFor(model => product.Price),00</h6>
+                        <p>@Html.DisplayFor(model => product.Name)</p>
+                    </a>
+                </div>
+            </div>
+        </div>}
 
                 </div>
->>>>>>> 94d226f16441ca03ab583fca1a9952e2b7235fc1
             </div>
-            <script>
-                var slider = document.querySelector(".slider");
-                var output = document.getElementById("price");
-                output.innerHTML = slider.value;
 
-                slider.oninput = function () {
-                    output.innerHTML = this.value;
-                }
-            </script>
-        </div>
-        <div class="col-lg-9  order-1 order-lg-2 mb-5 mb-lg-0">
-            <div class="row" id="tbody">
-                @foreach (var product in Model)
-                {
-    <div class="col-lg-4 col-sm-6 product-wrapper">
-        <div class="product-item">
-            <img src="@product.Image" />
-            <div class="product-description">
-                <h6>@product.Name</h6>
-                <span>@product.Price$</span>
-            </div>
-        </div>
-    </div>            }
-            </div>
         </div>
     </div>
 </section>
