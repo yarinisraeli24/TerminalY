@@ -19,7 +19,6 @@ namespace TerminalY.Models
         public int Price { get; set; }
         public List<CartItem> CartItems { get; set; }
         public DateTime Created { get; set; }
-        [Required]
         [DisplayName("Image File")]
         public String Image { get; set; }
     }
