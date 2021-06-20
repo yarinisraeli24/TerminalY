@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WebApplicationProject</title>
+    <title>@ViewData["Title"] - TerminalY</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="~/img/favicon.ico" rel="shortcut icon" />
@@ -12,7 +12,7 @@
 
 
 
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/test.css" />
     <link rel="stylesheet" href="~/css/font-awesome.min.css" />
     <link rel="stylesheet" href="~/css/flaticon.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -32,7 +32,7 @@
                     <div class="col-xl-6 col-lg-5">
                         <form asp-action="SearchProducts" asp-controller="Products" class="header-search-form">
                             <input name="term" id="searchBox" type="text" placeholder="Search for product ....">
-                            <button><i class="material-icons icon" style="font-size:20px;">search</i></button>
+                            <button><i class="flaticon-search"></i></button>
                         </form>
                     </div>
                     <div class="col-xl-4 col-lg-5">
@@ -49,7 +49,7 @@
                                             <i class="flaticon-bag icon"></i>
                                             @*<span>0</span>*@
                                         </div>
-                                        <a asp-action="CartDetails" asp-controller="Carts">Shopping Cart</a> &nbsp; &nbsp;
+                                        <a asp-action="Details" asp-controller="Carts">Shopping Cart</a> &nbsp; &nbsp;
                                     </div>
                                     <div class="up-item">
                                         <i class="flaticon-logout icon"></i>
@@ -89,7 +89,7 @@
                     @{ var role = Context.User.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role)?.Value;
                         if (role == "Admin")
                         {
-                            <li><a asp-action="Tables" asp-controller="AdminPanels">Admin Panel</a></li>
+                            <li><a asp-action="Tables" asp-controller="Admin">Admin</a></li>
                         }
                     }
                 </ul>
@@ -137,9 +137,7 @@
                         <p>
                             Terminal Y is a fitness apparel & accessories brand and online retailer based in Israel, supported by millions of highly engaged social media followers and customers.<br /><br />
 
-                            Be all that you imagined you could be.<br /><br />
-
-                            Or Sharoni<br />Roy Nahmuka<br /> Shoval Nissim<br /> Yarin Israeli
+                            Be all that you imagined you could be.
                         </p>
                         <img src="~/img/cards.png" alt="">
                     </div>
@@ -162,15 +160,10 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="footer-widget about-widget">
                         <h2>FOLLOW US</h2>
-                        <a asp-action="Index" asp-controller="Home" class="footer-icon site-logo">
-                            <i class="fab fa-facebook-square"></i>
-                        </a>
-                        <a asp-action="Index" asp-controller="Home" class="footer-icon site-logo">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a asp-action="Index" asp-controller="Home" class="footer-icon site-logo">
-                            <i class="fab fa-twitter"></i>
-                        </a>
+
+                        <div class="fb-like" data-href="https://www.facebook.com/Terminal-Y-100958118910653/?ref=pages_you_manage" data-width="" data-layout="standard" data-action="recommend" data-size="large" data-share="true"></div>
+                        <br /><br />
+                        Or Sharoni<br />Roy Nahmuka<br /> Shoval Nissim<br /> Yarin Israeli
                     </div>
                 </div>
             </div>
@@ -178,3 +171,6 @@
     </section>
 </body>
 </html>
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="cUeTJyLl"></script>

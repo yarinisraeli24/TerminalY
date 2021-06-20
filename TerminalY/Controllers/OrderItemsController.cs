@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TerminalY.Data;
 using TerminalY.Models;
+using Microsoft.AspNetCore.Authorization;
 
-namespace TerminalY.Controllers
+namespace LCPStore.Controllers
 {
+    [Authorize]
     public class OrderItemsController : Controller
     {
         private readonly TerminalYContext _context;
@@ -50,11 +52,11 @@ namespace TerminalY.Controllers
         }
 
         // POST: OrderItems/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Quantity,Price")] OrderItem orderItem)
+        public async Task<IActionResult> Create([Bind("Id,Quantity,TotalPrice")] OrderItem orderItem)
         {
             if (ModelState.IsValid)
             {
@@ -82,11 +84,11 @@ namespace TerminalY.Controllers
         }
 
         // POST: OrderItems/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Quantity,Price")] OrderItem orderItem)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Quantity,TotalPrice")] OrderItem orderItem)
         {
             if (id != orderItem.Id)
             {

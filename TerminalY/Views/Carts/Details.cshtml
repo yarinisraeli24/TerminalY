@@ -4,27 +4,84 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
-
-<div>
-    <h4>Cart</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TotalPrice)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TotalPrice)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Account)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Account.Name)
-        </dd>
-    </dl>
+<div class="page-top-info">
+    <div class="container">
+        <div class="site-pagination">
+            <a asp-action="Index" asp-controller="Home">Home</a>
+        </div>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+<!-- Page info end -->
+<!-- cart section end -->
+<section class="cart-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="cart-table">
+                    <h3>Your Cart</h3>
+                    <div class="cart-table-warp">
+                        <form id="delete-form"></form>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="product-th">Product</th>
+                                    <th class="quy-th">Quantity</th>
+                                    <th class="total-th">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.CartItems)
+                                {
+                                    <tr id="@item.Id">
+                                        <td class="product-col">
+                                            @if (item.Product.Image != null)
+                                            {
+                                                string img = item.Product.Image;
+                                                <img src="data:image/png;base64,@img" alt="No picture">
+                                            }
+                                            else
+                                            {
+                                                <img src="~/img/cart/1.jpg" alt="No picture">
+                                            }
+                                            <div class="pc-title">
+                                                <h4>@item.Product.Name</h4>
+                                                <p>$@item.Product.Price,00</p>
+                                            </div>
+                                        </td>
+                                        <td class="quy-col">
+                                            <div class="quantity">
+                                                <div class="pro-qty">
+                                                    <a class="dec qtybtn">-</a>
+                                                    <input type="text" class="qu-col" value="@item.Quantity" onfocus="this.oldvalue = this.value;" oninput="onChangefun(this, @item.Id);this.oldvalue = this.value;">
+                                                    <a class="inc qtybtn">+</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="total-col"><h4>$@item.Price,00</h4></td>
+                                        <td>
+                                            <button class="trash"><i class="fa fa-trash-o" style="font-size:24px"></i></button>
+                                            @*<input id="trash" form="delete-form" value="@item.Id" />
+                                                <a id="trash"><i class="fa fa-trash-o" style="font-size:24px"></i></a>*@
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="total-cost">
+                        <h6>Total <span id="total_cost">$@Model.TotalPrice,00</span></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 card-right">
+                @*<form class="promo-code-form">
+                        <input type="text" placeholder="Enter promo code">
+                        <button>Submit</button>
+                    </form>*@
+                <a asp-action="Create" asp-controller="Orders" class="site-btn">Proceed to checkout</a>
+                <a asp-action="Index" asp-controller="Home" class="site-btn sb-dark">Continue shopping</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- cart section end -->

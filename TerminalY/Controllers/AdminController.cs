@@ -256,7 +256,7 @@ namespace TerminalY.Controllers
         // GET: Products/Create
         public IActionResult ProductCreate()
         {
-            ViewBag.Categories = new SelectList(_context.Category.ToList(), "Id", "Name");
+            ViewData["categories"] = new SelectList(_context.Category, nameof(Category.Id), nameof(Category.Name));
             return View("~/Views/Admin/Products/Create.cshtml");
         }
 
@@ -265,22 +265,12 @@ namespace TerminalY.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
 /*        [ValidateAntiForgeryToken]
-*/        public async Task<IActionResult> ProductCreate([Bind("Id,Name,Description,Price,ImageFile,Created")] Product product, string categoryId)
+*/        public async Task<IActionResult> ProductCreate([Bind("Id,Name,Description,Price,ImageFile,Created")] Product product)
         {
             if (ModelState.IsValid)
             {
                 ViewData["categories"] = new SelectList(_context.Category, nameof(Category.Id), nameof(Category.Name));
                 product.Created = DateTime.Now;
-
-                /*                using (MemoryStream ms = new MemoryStream())
-                                {
-                                    product.ImageFile.CopyTo(ms);
-                                    product.Image = ms.ToArray();
-                                }*/
-
-                var category = await _context.Category.FirstAsync(c => c.Id.ToString() == categoryId);
-
-                product.Category = category;
 
                 _context.Add(product);
                 await _context.SaveChangesAsync();
@@ -321,11 +311,6 @@ namespace TerminalY.Controllers
             {
                 try
                 {
-                    /*                    using (MemoryStream ms = new MemoryStream())
-                                        {
-                                            product.ImageFile.CopyTo(ms);
-                                            product.Image = ms.ToArray();
-                                        }*/
                     _context.Update(product);
                     await _context.SaveChangesAsync();
                 }
@@ -528,6 +513,7 @@ namespace TerminalY.Controllers
         // GET: Categories/Create
         public IActionResult CategoryCreate()
         {
+            ViewData["products"] = new SelectList(_context.Product.Where(x => x.Category == null), nameof(Product.Id), nameof(Product.Name));
             return View("~/Views/Admin/Categories/Create.cshtml");
         }
 
@@ -536,10 +522,12 @@ namespace TerminalY.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CategoryCreate([Bind("Id,Name")] Category category)
+        public async Task<IActionResult> CategoryCreate([Bind("Id,Name")] Category category, int[] products)
         {
             if (ModelState.IsValid)
             {
+                category.Products = new List<Product>();
+                category.Products.AddRange(_context.Product.Where(x => products.Contains(x.Id)));
                 _context.Add(category);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Tables));

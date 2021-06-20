@@ -4,45 +4,73 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
-
-<div>
-    <h4>Product</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Created)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Created)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Image)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Image)
-        </dd>
-    </dl>
+<!-- Page info -->
+<div class="page-top-info">
+    <div class="container">
+        <h4>Product Page</h4>
+        <div class="site-pagination">
+            <a asp-action="Index" asp-controller="Home">Home</a> /
+            <a asp-action="Shop" asp-controller="Categories" asp-route-id="1">Shop</a>
+        </div>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+<section class="product-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="product-pic-zoom">
+                    @if (Model.Image != null)
+                    {
+                     <img src="@Model.Image" height="300" width="200"/>
+                    }
+                </div>
+            </div>
+            <div class="col-lg-6 product-details">
+                <h2 class="p-title">@Html.DisplayFor(model => model.Name)</h2>
+                <h3 class="p-price">$@Html.DisplayFor(model => model.Price),00</h3>
+                <h4 class="p-stock">Available: <span>In Stock</span></h4>
+                <form id="AddCartForm">
+                    <input hidden id="productId" name="productId" type="text" value="@Model.Id">
+                    <div class="quantity">
+                        <p>Quantity</p>
+                        <div class="pro-qty"><input id="quantity" name="quantity" type="text" value="1"></div>
+                    </div>
+                    <input type="submit" value="ADD TO CART" class="site-btn">
+                </form>
+                <div id="accordion" class="accordion-area">
+                    <div class="panel">
+                        <div class="panel-header" id="headingOne">
+                            <button class="panel-link active" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">information</button>
+                        </div>
+                        <div id="collapse1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="panel-body">
+                                <p>@Html.DisplayFor(model => model.Description).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-header" id="headingTwo">
+                            <button class="panel-link" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">care details </button>
+                        </div>
+                        <div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="panel-body">
+                                <img src="~/img/cards.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-header" id="headingThree">
+                            <button class="panel-link" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">shipping & Returns</button>
+                        </div>
+                        <div id="collapse3" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="panel-body">
+                                <h4>7 Days Returns</h4>
+                                <p>Cash on Delivery Available<br>Home Delivery <span>3 - 4 days</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TerminalY</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="~/img/favicon.ico" rel="shortcut icon" />
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-search-pseudo-elements></script>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/css/flaticon.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <header class="header-section">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 text-center text-lg-left site-logo-wrapper">
+                        <a asp-action="Index" asp-controller="Home" class="site-logo">
+                            <i class="fas fa-dumbbell logo icon"></i>
+                            <span>TERMINAL Y</span>
+                        </a>
+                    </div>
+                    <div class="col-xl-6 col-lg-5">
+                        <form asp-action="SearchProducts" asp-controller="Products" class="header-search-form">
+                            <input name="term" id="searchBox" type="text" placeholder="Search for product ....">
+                            <button><i class="material-icons icon" style="font-size:20px;">search</i></button>
+                        </form>
+                    </div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="user-panel">
+                            @{ var name = Context.User.Claims.FirstOrDefault(c => c.Type == "Name")?.Value;
+                                if (name != null)
+                                {
+                                    <div class="up-item">
+                                        <i class="flaticon-profile"></i>
+                                        <span>@name</span>
+                                    </div>
+                                    <div class="up-item">
+                                        <div class="shopping-card">
+                                            <i class="flaticon-bag icon"></i>
+                                            @*<span>0</span>*@
+                                        </div>
+                                        <a asp-action="Details" asp-controller="Carts">Shopping Cart</a> &nbsp; &nbsp;
+                                    </div>
+                                    <div class="up-item">
+                                        <i class="flaticon-logout icon"></i>
+                                        <a asp-action="LogOut" asp-controller="Accounts">Log Out</a>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="up-item">
+                                        <a asp-action="Login" asp-controller="Accounts"><i class="fas fa-user-circle icon" style="font-size: 32px;"></i></a>
+                                    </div>
+                                }
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-navbar">
+            <div class="container">
+                <!-- menu -->
+                <ul class="main-menu">
+                    <li><a asp-action="Index" asp-controller="Home">Home</a></li>
+                    <li>
+                        <a asp-action="Shop" asp-controller="Categories" asp-route-id="1">Shop</a>
+                        <!--<ul class="sub-menu">-->
+                        @*<li><a href="#">Outdoors and Camping</a></li>
+                        <li><a href="#">Gadgets</a></li>
+                        <li><a href="#">Baby Essentials</a></li>
+                        <li><a href="#">Convenience</a></li>
+                        <li><a href="#">Sports Accessories</a></li>*@
+                        <!--</ul>-->
+                    </li>
+                    <li><a asp-action="AboutUs" asp-controller="Home">About us</a></li>
+                    <li><a asp-action="Contact" asp-controller="Contacts">Contact us</a></li>
+                    @{ var role = Context.User.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role)?.Value;
+                        if (role == "Admin")
+                        {
+                            <li><a asp-action="Tables" asp-controller="Admin">Admin</a></li>
+                        }
+                    }
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a asp-action="Tables" asp-controller="Admin">
+                    <i class="fas fa-table"></i>Tables
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-action="Charts" asp-controller="Admin">
+                    <i class="fas fa-chart-bar"></i>Charts
+                </a>
+            </li>
+        </ul>
+
+    </header>
+    <!--   <header class="header-section">
+           <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <div class="container-fluid">
+                   <i class="logo fas fa-dumbbell"></i>
+                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                       <span class="navbar-toggler-icon"></span>
+                   </button>
+                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                       <form class="d-flex">
+                           <input class="form-control me-2 search_input" type="search" placeholder="Search" aria-label="Search">
+                           <button class="btn search_submit" type="submit"><i class="material-icons" style="font-size:20px;">search</i></button>
+                       </form>
+                   </div>
+                   <a href="#" class="sign_in"><i class="fas fa-user-circle"></i></a>
+               </div>
+           </nav>
+       </header>
+        -->
+    <div class="container">
+        <main role="main" class="body-wrapper pb-3">
+            @RenderBody()
+        </main>
+    </div>
+</body>
+</html>

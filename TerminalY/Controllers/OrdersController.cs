@@ -7,9 +7,13 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TerminalY.Data;
 using TerminalY.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Threading;
+using System.Security.Claims;
 
 namespace TerminalY.Controllers
 {
+    [Authorize]
     public class OrdersController : Controller
     {
         private readonly TerminalYContext _context;
@@ -46,22 +50,78 @@ namespace TerminalY.Controllers
         // GET: Orders/Create
         public IActionResult Create()
         {
+            var user = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+            if (user == null)
+            {
+                return RedirectToAction("Login", "Accounts");
+            }
+
+            Cart cart = _context.Cart.Where(s => s.Account.Username == user).Include(i => i.CartItems).ThenInclude(p => p.Product).First();
+            foreach (CartItem ci in cart.CartItems)
+            {
+                if (ci.Quantity == 0)
+                {
+                    _context.CartItem.Remove(ci);
+                }
+            }
+            _context.SaveChanges();
+            ViewData["cart_to_view"] = cart;
+
+
             return View();
         }
 
         // POST: Orders/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+
         public async Task<IActionResult> Create([Bind("Id,Country,City,Address,PostalCode,PhoneNumber,TotalPrice,Delivery,OrderTime")] Order order)
         {
+
+            var user = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+            if (user == null)
+            {
+                return RedirectToAction("Login", "Accounts");
+            }
+
+            Cart cart = await _context.Cart.Where(s => s.Account.Username == user)
+                .Include(c => c.CartItems).ThenInclude(p => p.Product)
+                .Include(a => a.Account)
+                .FirstOrDefaultAsync<Cart>();
+
             if (ModelState.IsValid)
             {
+                order.OrderTime = DateTime.Now;
+                order.Account = cart.Account;
+                order.OrderItems = new List<OrderItem>();
+                if (order.Delivery.ToString() == "Standart")
+                {
+                    order.TotalPrice = cart.TotalPrice;
+                }
+                else
+                { order.TotalPrice = cart.TotalPrice + 3; }
+
+                foreach (var item in cart.CartItems)
+                {
+                    if (item.Quantity > 0)
+                    {
+                        order.OrderItems.Add(new OrderItem() { Order = order, Product = item.Product, Quantity = item.Quantity, Price = item.Price });
+                    }
+                }
                 _context.Add(order);
+                cart.Order = order;
+                _context.CartItem.RemoveRange(_context.CartItem.Where(c => c.Cart == cart));
+                cart.TotalPrice = 0;
+                cart.Order = null;
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+
+                String orderID = order.Id.ToString();
+                ViewData["Message"] = orderID;
+                return View("Ordered");
             }
+
             return View(order);
         }
 
@@ -82,8 +142,8 @@ namespace TerminalY.Controllers
         }
 
         // POST: Orders/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Country,City,Address,PostalCode,PhoneNumber,TotalPrice,Delivery,OrderTime")] Order order)
