@@ -13,14 +13,14 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\USER\Source\Repos\TerminalY\TerminalY\Views\_ViewImports.cshtml"
+#line 1 "C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\Views\_ViewImports.cshtml"
 using TerminalY;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\USER\Source\Repos\TerminalY\TerminalY\Views\_ViewImports.cshtml"
+#line 2 "C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\Views\_ViewImports.cshtml"
 using TerminalY.Models;
 
 #line default
@@ -62,7 +62,7 @@ using TerminalY.Models;
         {
             WriteLiteral("\r\n");
 #nullable restore
-#line 3 "C:\Users\USER\Source\Repos\TerminalY\TerminalY\Views\Admin\CartItems\Delete.cshtml"
+#line 3 "C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\Views\Admin\CartItems\Delete.cshtml"
   
     ViewData["Title"] = "Delete";
 
@@ -71,7 +71,7 @@ using TerminalY.Models;
 #nullable disable
             WriteLiteral("\r\n<h1>Delete</h1>\r\n\r\n<h3>Are you sure you want to delete this?</h3>\r\n<div>\r\n    <h4>CartItem</h4>\r\n    <hr />\r\n    <dl class=\"row\">\r\n        <dt class = \"col-sm-2\">\r\n            ");
 #nullable restore
-#line 15 "C:\Users\USER\Source\Repos\TerminalY\TerminalY\Views\Admin\CartItems\Delete.cshtml"
+#line 15 "C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\Views\Admin\CartItems\Delete.cshtml"
        Write(Html.DisplayNameFor(model => model.Quantity));
 
 #line default
@@ -79,7 +79,7 @@ using TerminalY.Models;
 #nullable disable
             WriteLiteral("\r\n        </dt>\r\n        <dd class = \"col-sm-10\">\r\n            ");
 #nullable restore
-#line 18 "C:\Users\USER\Source\Repos\TerminalY\TerminalY\Views\Admin\CartItems\Delete.cshtml"
+#line 18 "C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\Views\Admin\CartItems\Delete.cshtml"
        Write(Html.DisplayFor(model => model.Quantity));
 
 #line default
@@ -87,7 +87,7 @@ using TerminalY.Models;
 #nullable disable
             WriteLiteral("\r\n        </dd>\r\n        <dt class = \"col-sm-2\">\r\n            ");
 #nullable restore
-#line 21 "C:\Users\USER\Source\Repos\TerminalY\TerminalY\Views\Admin\CartItems\Delete.cshtml"
+#line 21 "C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\Views\Admin\CartItems\Delete.cshtml"
        Write(Html.DisplayNameFor(model => model.Price));
 
 #line default
@@ -95,16 +95,16 @@ using TerminalY.Models;
 #nullable disable
             WriteLiteral("\r\n        </dt>\r\n        <dd class = \"col-sm-10\">\r\n            ");
 #nullable restore
-#line 24 "C:\Users\USER\Source\Repos\TerminalY\TerminalY\Views\Admin\CartItems\Delete.cshtml"
+#line 24 "C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\Views\Admin\CartItems\Delete.cshtml"
        Write(Html.DisplayFor(model => model.Price));
 
 #line default
 #line hidden
 #nullable disable
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n    \r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ed0ed7a4dae76256908448262d531a8c4388a2436173", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "708f1621d5998cd6901e313d2508485c830f87a36182", async() => {
                 WriteLiteral("\r\n        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ed0ed7a4dae76256908448262d531a8c4388a2436439", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "708f1621d5998cd6901e313d2508485c830f87a36448", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -112,7 +112,7 @@ using TerminalY.Models;
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.InputTypeName = (string)__tagHelperAttribute_0.Value;
                 __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_0);
 #nullable restore
-#line 29 "C:\Users\USER\Source\Repos\TerminalY\TerminalY\Views\Admin\CartItems\Delete.cshtml"
+#line 29 "C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\Views\Admin\CartItems\Delete.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Id);
 
 #line default
@@ -127,7 +127,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n        <input type=\"submit\" value=\"Delete\" class=\"btn btn-danger\" /> |\r\n        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ed0ed7a4dae76256908448262d531a8c4388a2438234", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "708f1621d5998cd6901e313d2508485c830f87a38243", async() => {
                     WriteLiteral("Back to List");
                 }
                 );
