@@ -264,19 +264,22 @@ namespace TerminalY.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-/*        [ValidateAntiForgeryToken]
-*/        public async Task<IActionResult> ProductCreate([Bind("Id,Name,Description,Price,ImageFile,Created")] Product product)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ProductCreate([Bind("Id,Name,Description,Price,Image,Created")] Product product, string categoryId)
         {
             if (ModelState.IsValid)
             {
-                ViewData["categories"] = new SelectList(_context.Category, nameof(Category.Id), nameof(Category.Name));
                 product.Created = DateTime.Now;
+
+                var category = await _context.Category.FirstOrDefaultAsync(c => c.Id.ToString().CompareTo(categoryId) == 0);
+
+                product.Category = category;
 
                 _context.Add(product);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Tables));
             }
-            return View("~/Views/Admin/Products/Create.cshtml", product);
+            return View("~/Views/AdminPanels/Products/Create.cshtml", product);
         }
 
         // GET: Products/Edit/5
