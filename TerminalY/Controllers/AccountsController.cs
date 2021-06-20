@@ -51,7 +51,7 @@ namespace TerminalY.Controllers
             }
             if (ModelState.IsValid)
             {
-                //account.Cart = new Cart();
+                account.Cart = new Cart();
                 account.Registered = DateTime.Now;
                 account.Role = (Role)1;
                 _context.Add(account);
@@ -90,6 +90,7 @@ namespace TerminalY.Controllers
         {
             var claims = new List<Claim>
             {
+
                 new Claim(ClaimTypes.Email, user.Username),
                 new Claim("Name", user.Name),
                 new Claim(ClaimTypes.Role, user.Role.ToString()),
@@ -119,7 +120,7 @@ namespace TerminalY.Controllers
             return RedirectToAction(nameof(Index), "Home");
         }
 
-        private bool AccountsExists(int id)
+        private bool AccountExists(int id)
         {
             return _context.Account.Any(e => e.Id == id);
         }

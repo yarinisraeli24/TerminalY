@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using TerminalY.Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Net;
+using Microsoft.AspNetCore.Diagnostics;
 
 namespace TerminalY
 {
@@ -35,6 +37,7 @@ namespace TerminalY
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 
+
             services.AddOptions<CookieAuthenticationOptions>(
                     CookieAuthenticationDefaults.AuthenticationScheme)
             .Configure((options) =>
@@ -52,10 +55,20 @@ namespace TerminalY
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseExceptionHandler(appError =>
+            {
+                appError.Run(async context =>
+                {
+                    context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                    context.Response.ContentType = "application/json";
+                    var exceptionHandlerFeature = context.Features.Get<IExceptionHandlerFeature>();
+                    context.Response.Redirect("/Home/Error");
+                });
+            });
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -63,9 +76,9 @@ namespace TerminalY
 
             app.UseSession();
 
-            app.UseAuthorization();
-
             app.UseAuthentication();
+
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
