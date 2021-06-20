@@ -114,11 +114,9 @@
            </nav>
        </header>
         -->
-    <div class="container">
-        <main role="main" class="body-wrapper pb-3">
-            @RenderBody()
-        </main>
-    </div>
+
+    @RenderBody()
+
 
     <section class="footer-section">
         <div class="container">
@@ -169,8 +167,11 @@
             </div>
         </div>
     </section>
+
+    <script src="~/js/jquery-3.2.1.min.js"></script>
+    <script src="~/js/site.js"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="cUeTJyLl"></script>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
 
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="cUeTJyLl"></script>

@@ -22,6 +22,7 @@ a {
     margin: 0;
     padding: 0;
     height: 100vh;
+    position: relative;
 }
 
 .icon:hover {
@@ -57,7 +58,6 @@ html {
     min-height: 100%;
 }
 body {
-    height:100vh;
     /* Margin bottom by footer height */
 }
 
@@ -628,4 +628,9 @@ ul {
 }
 .footer-icon:hover{
     color: rebeccapurple;
+}
+
+.cart-image{
+    width: 100px;
+    height: 100px;
 }
