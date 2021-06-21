@@ -26,7 +26,7 @@
                     <div class="col-lg-2 text-center text-lg-left site-logo-wrapper">
                         <a asp-action="Index" asp-controller="Home" class="site-logo">
                             <i class="fas fa-dumbbell logo icon"></i>
-                            <span>TERMINAL Y</span>
+                            <span class="logo-name-top">Terminal Y</span>
                         </a>
                     </div>
                     <div class="col-xl-6 col-lg-5">
@@ -84,8 +84,7 @@
                             <li><a href="#">Sports Accessories</a></li>*@
                         <!--</ul>-->
                     </li>
-                    <li><a asp-action="AboutUs" asp-controller="Home">About us</a></li>
-                    <li><a asp-action="Contact" asp-controller="Contacts">Contact us</a></li>
+                    <li><a asp-action="Create" asp-controller="Contacts">Contact us</a></li>
                     @{ var role = Context.User.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role)?.Value;
                         if (role == "Admin")
                         {
@@ -114,11 +113,9 @@
            </nav>
        </header>
         -->
-    <div class="container">
-        <main role="main" class="body-wrapper pb-3">
-            @RenderBody()
-        </main>
-    </div>
+
+    @RenderBody()
+
 
     <section class="footer-section">
         <div class="container">
@@ -133,44 +130,36 @@
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="footer-widget about-widget">
-                        <h2>ABOUT US</h2>
-                        <p>
-                            Terminal Y is a fitness apparel & accessories brand and online retailer based in Israel, supported by millions of highly engaged social media followers and customers.<br /><br />
-
-                            Be all that you imagined you could be.
-                        </p>
+                        <a asp-action="AboutUs" asp-controller="Home" class="footer-but">About us</a>
                         <img src="~/img/cards.png" alt="">
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-sm-6">
                     <div class="footer-widget about-widget">
-                        <h2>DELIVERY INFORMATION</h2>
-                        <p>In the unlikely event that you do not recieve your order after the stated delivery timeframe, please contact us as soon as you are aware and no longer than 7 days from the delivery date stated on your tracking.</p>
+                        <a asp-action="Delivery" asp-controller="Home" class="footer-but">Delivery</a>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-sm-6">
                     <div class="footer-widget about-widget">
-                        <h2>CAREERS</h2>
-                        <p>Come work with us! <br /><br />If you think you are fit to our growing company and like sport like us send us your CV via email.<br /> <br />terminaly@test.com</p>
+                        <div class="footer-button"><a asp-action="Careers" asp-controller="Home" class="footer-but">Careers</a></div>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-sm-6">
                     <div class="footer-widget about-widget">
-                        <h2>FOLLOW US</h2>
-
                         <div class="fb-like" data-href="https://www.facebook.com/Terminal-Y-100958118910653/?ref=pages_you_manage" data-width="" data-layout="standard" data-action="recommend" data-size="large" data-share="true"></div>
-                        <br /><br />
-                        Or Sharoni<br />Roy Nahmuka<br /> Shoval Nissim<br /> Yarin Israeli
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <script src="~/js/jquery-3.2.1.min.js"></script>
+    <script src="~/js/site.js"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="cUeTJyLl"></script>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
 
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="cUeTJyLl"></script>

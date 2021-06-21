@@ -2,18 +2,12 @@
 
 @{ ViewData["Title"] = "Shop"; }
 
-<div class="site-pagination">
-    <a asp-action="Index" asp-controller="Home">Home</a> /
-    <a asp-action="Categories" asp-controller="Shop">Shop</a>
-</div>
-<!-- Page info end -->
-<!-- Category section -->
 <section class="category-section spad">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 order-2 order-lg-1">
                 <div class="filter-widget">
-                    <h2 class="fw-title">Categories</h2>
+                    <h2 class="fw-title categories-header-shop">Categories</h2>
                     <ul class="categories-list">
                         <li>
                             <a href="#home"><span>Shorts</span></a>
@@ -45,28 +39,27 @@
                 <div class="row" id="tbody">
                     @foreach (var product in Model)
                     {
-        <div class="col-lg-4 col-sm-6">
-            <div class="product-item">
-                <div class="pi-pic">
-                    <a asp-action="Details" asp-controller="Products" asp-route-id="@product.Id">
-                        @if (product.Image != null)
-                        {
-        <img src="@product.Image" height="350" width="250">}
-                    </a>
-                </div>
-                <div class="pi-text">
-                    <a asp-action="Details" asp-controller="Products" asp-route-id="@product.Id">
-                        <h6>$@Html.DisplayFor(model => product.Price),00</h6>
-                        <p>@Html.DisplayFor(model => product.Name)</p>
-                    </a>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="product-item">
+                                <div class="pi-pic">
+                                    <a asp-action="Details" asp-controller="Products" asp-route-id="@product.Id">
+                                        @if (product.Image != null)
+                                        {
+                                            <img src="@product.Image" height="350" width="250">
+                                        }
+                                    </a>
+                                </div>
+                                <div class="pi-text">
+                                    <a asp-action="Details" asp-controller="Products" asp-route-id="@product.Id">
+                                        <h6>$@Html.DisplayFor(model => product.Price),00</h6>
+                                        <p>@Html.DisplayFor(model => product.Name)</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    }
                 </div>
             </div>
-        </div>}
-
-                </div>
-            </div>
-
         </div>
     </div>
 </section>
-<a href="/Products/ProductDetails/${id}">

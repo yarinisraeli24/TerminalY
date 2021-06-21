@@ -4,15 +4,6 @@
     ViewData["Title"] = "Details";
 }
 
-<div class="page-top-info">
-    <div class="container">
-        <div class="site-pagination">
-            <a asp-action="Index" asp-controller="Home">Home</a>
-        </div>
-    </div>
-</div>
-<!-- Page info end -->
-<!-- cart section end -->
 <section class="cart-section spad">
     <div class="container">
         <div class="row">
@@ -37,7 +28,7 @@
                                             @if (item.Product.Image != null)
                                             {
                                                 string img = item.Product.Image;
-                                                <img src="data:image/png;base64,@img" alt="No picture">
+                                                <img src="@img" alt="No picture" class="cart-image">
                                             }
                                             else
                                             {
@@ -59,7 +50,7 @@
                                         </td>
                                         <td class="total-col"><h4>$@item.Price,00</h4></td>
                                         <td>
-                                            <button class="trash"><i class="fa fa-trash-o" style="font-size:24px"></i></button>
+                                            <button class="trash btn-danger"><i class="fas fa-trash-alt" style="font-size: 24px"></i></button>
                                             @*<input id="trash" form="delete-form" value="@item.Id" />
                                                 <a id="trash"><i class="fa fa-trash-o" style="font-size:24px"></i></a>*@
                                         </td>
