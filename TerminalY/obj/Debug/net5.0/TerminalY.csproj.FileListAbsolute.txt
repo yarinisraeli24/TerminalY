@@ -851,7 +851,4 @@ C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\View
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Home\Delivery.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Products\SearchProducts.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Contacts\Create.cshtml.g.cs
-C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Contacts\Delete.cshtml.g.cs
-C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Contacts\Edit.cshtml.g.cs
-C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Contacts\Index.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Contacts\Thankyou.cshtml.g.cs
