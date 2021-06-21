@@ -634,3 +634,8 @@ ul {
     width: 100px;
     height: 100px;
 }
+.footer-button .footer-button:hover .footer-button::after {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
