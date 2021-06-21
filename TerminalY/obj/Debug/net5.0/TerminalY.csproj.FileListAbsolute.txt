@@ -852,3 +852,5 @@ C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\View
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Products\SearchProducts.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Contacts\Create.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Contacts\Thankyou.cshtml.g.cs
+C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Contacts\Create.cshtml.g.cs
+C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Contacts\Thankyou.cshtml.g.cs
