@@ -786,3 +786,43 @@ label {
 .label-agree-term {
     font-size: 12px;
 }
+
+
+/* Admin Tables*/
+
+.table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    .table td, .table th {
+        border: 1px solid #ddd;
+        text-align: center;
+        padding: 8px;
+        height: 40px;
+       
+    }
+
+    .table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .table tr:hover {
+        background-color: #ddd;
+    }
+
+    .table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #282828;
+        color: white;
+        text-align: center;
+    }
+
+.table-title{
+    margin-top: 4rem;
+    text-align: center;
+    color: rebeccapurple;
+}
