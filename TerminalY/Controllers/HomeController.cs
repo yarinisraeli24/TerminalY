@@ -23,7 +23,15 @@ namespace TerminalY.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
+        public IActionResult Careers()
+        {
+            return View();
+        }
+        public IActionResult Delivery()
         {
             return View();
         }

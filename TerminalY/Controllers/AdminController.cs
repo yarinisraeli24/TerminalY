@@ -366,7 +366,7 @@ namespace TerminalY.Controllers
         {
             return _context.Product.Any(e => e.Id == id);
         }
-
+/*
         // GET: Contacts/Details/5
         public async Task<IActionResult> ContactDetails(int? id)
         {
@@ -492,7 +492,7 @@ namespace TerminalY.Controllers
         private bool ContactExists(int id)
         {
             return _context.Contact.Any(e => e.Id == id);
-        }
+        }*/
 
         // GET: Categories/Details/5
         public async Task<IActionResult> CategoryDetails(int? id)

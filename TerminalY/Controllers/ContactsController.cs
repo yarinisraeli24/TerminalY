@@ -19,6 +19,12 @@ namespace TerminalY.Controllers
             _context = context;
         }
 
+        // GET: Contacts
+        public async Task<IActionResult> Index()
+        {
+            return View(await _context.Contact.ToListAsync());
+        }
+
         // GET: Contacts/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -36,9 +42,33 @@ namespace TerminalY.Controllers
 
             return View(contact);
         }
-        private bool ContactExists(int id)
+
+        // GET: Contacts/Create
+        public IActionResult Create()
         {
-            return _context.Contact.Any(e => e.Id == id);
+            return View();
         }
+
+        public IActionResult Thankyou()
+        {
+            return View();
+        }
+
+        // POST: Contacts/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Id,Name,Email,Subject,Body")] Contact contact)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(contact);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Thankyou));
+            }
+            return View(contact);
+        }
+
     }
 }
