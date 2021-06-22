@@ -303,7 +303,7 @@ namespace TerminalY.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ProductEdit(int id, [Bind("Id,Name,Description,Price,ImageFile,Created")] Product product)
+        public async Task<IActionResult> ProductEdit(int id, [Bind("Id,Name,Description,Price,Image,Created")] Product product)
         {
             if (id != product.Id)
             {
@@ -366,7 +366,7 @@ namespace TerminalY.Controllers
         {
             return _context.Product.Any(e => e.Id == id);
         }
-/*
+
         // GET: Contacts/Details/5
         public async Task<IActionResult> ContactDetails(int? id)
         {
@@ -430,7 +430,7 @@ namespace TerminalY.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ContactEdit(int id, [Bind("Id,Name,Subject,Body")] Contact contact)
+        public async Task<IActionResult> ContactEdit(int id, [Bind("Id,Name,Email,Subject,Body")] Contact contact)
         {
             if (id != contact.Id)
             {
@@ -492,8 +492,7 @@ namespace TerminalY.Controllers
         private bool ContactExists(int id)
         {
             return _context.Contact.Any(e => e.Id == id);
-        }*/
-
+        }
         // GET: Categories/Details/5
         public async Task<IActionResult> CategoryDetails(int? id)
         {
@@ -1058,7 +1057,7 @@ namespace TerminalY.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult> OrderCreate([Bind("Id,Country,City,Address,ZipCode,PhoneNumber,TotalPay,Delivery,OrderTime")] Order order)
+        public async Task<IActionResult> OrderCreate([Bind("Id,Country,City,Address,PostalCode,PhoneNumber,TotalPrice,Delivery,OrderTime")] Order order)
         {
             if (ModelState.IsValid)
             {
@@ -1091,7 +1090,7 @@ namespace TerminalY.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> OrderEdit(int id, [Bind("Id,Country,City,Address,ZipCode,PhoneNumber,TotalPay,Delivery,OrderTime")] Order order)
+        public async Task<IActionResult> OrderEdit(int id, [Bind("Id,Country,City,Address,PostalCode,PhoneNumber,TotalPrice,Delivery,OrderTime")] Order order)
         {
             if (id != order.Id)
             {

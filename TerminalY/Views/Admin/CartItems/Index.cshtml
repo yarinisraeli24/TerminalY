@@ -6,9 +6,6 @@
 
 <h1 class="table-title">Cart Items</h1>
 
-<p>
-    <a asp-action="CartItemCreate">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -31,7 +28,6 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                <a asp-action="CartItemEdit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="CartItemDetails" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="CartItemDelete" asp-route-id="@item.Id">Delete</a>
             </td>

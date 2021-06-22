@@ -890,3 +890,7 @@ video{
     border:none;
     border-radius:80px;
 }
+
+.form-control{
+    margin-top: 2rem;
+}
