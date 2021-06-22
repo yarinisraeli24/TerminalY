@@ -7148,39 +7148,23 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\USER\\.nuget\\packages\\": {},
-=======
     "C:\\Users\\97254\\.nuget\\packages\\": {},
->>>>>>> d76192d72d98868f13e0e59265b3fc04c48bc5ce
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\USER\\Source\\Repos\\TerminalY\\TerminalY\\TerminalY.csproj",
-      "projectName": "TerminalY",
-      "projectPath": "C:\\Users\\USER\\Source\\Repos\\TerminalY\\TerminalY\\TerminalY.csproj",
-      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\Source\\Repos\\TerminalY\\TerminalY\\obj\\",
-=======
       "projectUniqueName": "C:\\Users\\97254\\Desktop\\TerminalY\\TerminalY\\TerminalY.csproj",
       "projectName": "TerminalY",
       "projectPath": "C:\\Users\\97254\\Desktop\\TerminalY\\TerminalY\\TerminalY.csproj",
       "packagesPath": "C:\\Users\\97254\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\97254\\Desktop\\TerminalY\\TerminalY\\obj\\",
->>>>>>> d76192d72d98868f13e0e59265b3fc04c48bc5ce
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
-        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
         "C:\\Users\\97254\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> d76192d72d98868f13e0e59265b3fc04c48bc5ce
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7240,8 +7224,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\97254\\Desktop\\TerminalY\\TerminalY\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
