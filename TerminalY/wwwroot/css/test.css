@@ -26,7 +26,7 @@ a {
 }
 
 .icon:hover {
-    color: rebeccapurple;
+    color: mediumpurple;
 }
 html {
     font-size: 14px;
@@ -58,7 +58,9 @@ html {
     min-height: 100%;
 }
 body {
-    font-weight:400;
+    font-weight: 400;
+    background-image: url("bodyBACK1.jpg");
+    background-size: 100% 100%;
     /* Margin bottom by footer height */
 }
 
@@ -73,16 +75,15 @@ body {
 .home_main_container {
     width: 100%;
     height: 100vh;
-    background-color: aliceblue;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("BACK.png");
-    background-size: 100% 100%;
+/*    background-image: url("BACK.png");
+*/    background-size: 100% 100%;
 }
 .home_main_buttons {
     margin-top: 47vh;
-    width: 80vh;
+    width: 70vh;
     justify-content: space-between;
     display: flex;
 }
@@ -90,7 +91,7 @@ body {
     width: 24vh;
     height: 8vh;
     background-color: white;
-    color: rebeccapurple;
+    color: mediumpurple;
     border: none;
     border-radius: 1000px;
 }
@@ -98,7 +99,7 @@ body {
     .gender_btn:hover, .gender_btn::after, .gender_btn::before {
         width: 24vh;
         height: 8vh;
-        background-color: rebeccapurple;
+        background-color: mediumpurple;
         color: white;
         border-radius: 1000px;
         border: none;
@@ -127,7 +128,7 @@ body {
         outline: none;
     }
         .search_submit > i:hover {
-            color: rebeccapurple;
+            color: mediumpurple;
         }
 
 .sign_in {
@@ -135,7 +136,7 @@ body {
 }
 
     .sign_in > i {
-        color: rebeccapurple;
+        color: mediumpurple;
     }
 
 .navbar {
@@ -165,7 +166,7 @@ body {
     height: 1rem;
 }
     .site-logo:hover {
-        color: rebeccapurple;
+        color: mediumpurple;
     }
 
 
@@ -216,7 +217,7 @@ body {
         }
 
 .up-item:hover {
-    color: rebeccapurple;
+    color: mediumpurple;
 }
 .user-panel .up-item a {
     font-size: 14px;
@@ -303,7 +304,7 @@ main-menu ul {
     }
 
     .main-menu li:hover > a {
-        color: rebeccapurple;
+        color: mediumpurple;
         text-decoration: none;
     }
 .main-menu .sub-menu {
@@ -351,7 +352,6 @@ main-menu ul {
 
 .footer-logo {
     text-decoration: none;
-    color: rebeccapurple;
     padding: 1rem 0;
     display: flex;
 
@@ -421,7 +421,6 @@ main-menu ul {
 .footer-logo {
     font-size: 50px;
     text-decoration: none;
-    color: rebeccapurple;
 }
 .footer-widget ul li a:hover:after {
     width: 7px;
@@ -631,7 +630,7 @@ ul {
     color: #8F8F8F;
 }
 .footer-icon:hover{
-    color: rebeccapurple;
+    color: mediumpurple;
 }
 
 .cart-image{
@@ -696,7 +695,7 @@ ul {
 }
 .footer-but:hover {
     text-decoration: none;
-    color: rebeccapurple;
+    color: mediumpurple;
 }
 .flaticon-search{
     width:1rem;
@@ -821,8 +820,16 @@ label {
         text-align: center;
     }
 
-.table-title{
+.table-title {
     margin-top: 4rem;
     text-align: center;
-    color: rebeccapurple;
+    color: mediumpurple;
+}
+video{
+    position:absolute;
+    width:100%;
+    height:100vh;
+    z-index:-1;
+    margin:0;
+    padding:0;
 }
