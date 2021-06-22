@@ -394,7 +394,6 @@ C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Cart
 C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Categories\Shop.cshtml.g.cs
 C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Contacts\Details.cshtml.g.cs
 C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\OrderItems\Create.cshtml.g.cs
 C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\OrderItems\Delete.cshtml.g.cs
 C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\OrderItems\Details.cshtml.g.cs
@@ -858,3 +857,8 @@ C:\Users\Mali\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Contacts\
 C:\Users\Mali\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Home\AboutUs.cshtml.g.cs
 C:\Users\Mali\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Home\Careers.cshtml.g.cs
 C:\Users\Mali\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Home\Delivery.cshtml.g.cs
+C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Contacts\Create.cshtml.g.cs
+C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Contacts\Thankyou.cshtml.g.cs
+C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Home\AboutUs.cshtml.g.cs
+C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Home\Careers.cshtml.g.cs
+C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Home\Delivery.cshtml.g.cs

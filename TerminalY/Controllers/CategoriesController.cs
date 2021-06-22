@@ -29,8 +29,7 @@ namespace TerminalY.Controllers
             if (id == null)
             {
                 category = await _context.Category
-                    .Include(p => p.Products)
-                    .FirstAsync();
+                    .Include(p => p.Products).FirstAsync();
                 return Redirect("/Categories/Shop/" + category.Id.ToString());
             }
             else if (!isValidId)
