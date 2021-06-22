@@ -16,6 +16,12 @@
                             </li>
                         }
                     </ul>
+                    <div class="range-filter">
+                        <input type="range" min="0" max="1000" value="50" class="slider" id="myRange">
+                        <input type="text" name="minamount" id="minamount">
+                        <input type="text" name="maxamount" id="maxamount">
+                        <button id="filter-btn" class="site-btn">Filter</button>
+                    </div><!-- / range-filter -->
                 </div>
             </div>
             <div class="col-lg-9  order-1 order-lg-2 mb-5 mb-lg-0">
@@ -46,3 +52,25 @@
         </div>
     </div>
 </section>
+@section Scripts {
+    <script src="~/js/Filter.js"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+
+    <script id="results" type="text/html">
+
+        <div class="col-lg-4 col-sm-6">
+            <div class="product-item">
+                <div class="pi-pic">
+                    <a href="/Products/ProductDetails/${id}">
+                        <img src="data:image/png;base64,${image}" alt="${name}">
+                    </a>
+                </div>
+                <div class="pi-text">
+                    <h6>$ ${price},00</h6>
+                    <p>${name}</p>
+                </div>
+            </div>
+        </div>
+    </script>
+
+}
