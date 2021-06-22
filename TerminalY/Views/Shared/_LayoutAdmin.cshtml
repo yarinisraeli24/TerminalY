@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="~/img/favicon.ico" rel="shortcut icon" />
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-search-pseudo-elements></script>
+    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Ao2A8Trsb1HTvU7y0nLhN7MXLgIU7wiSA-do1b68ergc1RO2BLUyl5GR5n_sVs_j' async defer></script>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
 
 
@@ -105,6 +106,11 @@
             <li class="nav-item">
                 <a asp-action="Charts" asp-controller="Admin">
                     <i class="fas fa-chart-bar"></i>Charts
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-action="Map" asp-controller="Admin">
+                    <i class="fas fa-map-marked-alt"></i>Map
                 </a>
             </li>
         </ul>

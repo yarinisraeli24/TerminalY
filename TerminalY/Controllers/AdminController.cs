@@ -1157,5 +1157,10 @@ namespace TerminalY.Controllers
         {
             return _context.Order.Any(e => e.Id == id);
         }
+
+        public IActionResult Map()
+        {
+            return View();
+        }
     }
 }

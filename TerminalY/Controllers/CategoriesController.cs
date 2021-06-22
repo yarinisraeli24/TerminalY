@@ -49,10 +49,10 @@ namespace TerminalY.Controllers
 
             return View(category.Products);
         }
-        public async Task<IActionResult> SearchByPriceAndCategory(string minamount, string maxamount, String category)
+        public async Task<IActionResult> SearchByPriceAndCategory(string minamount, string maxamount, string category)
         {
-            int minim = Int32.Parse(minamount.Substring(1));
-            int maxim = Int32.Parse(maxamount.Substring(1));
+            int minim = Int32.Parse(minamount);
+            int maxim = Int32.Parse(maxamount);
             var query = from p in _context.Product
                         where ((p.Category.Id.ToString() == category) && (p.Price >= minim && p.Price <= maxim))
                         select p;

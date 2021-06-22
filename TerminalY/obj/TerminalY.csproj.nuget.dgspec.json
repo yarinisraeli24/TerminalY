@@ -1,19 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\USER\\source\\repos\\TerminalY\\TerminalY\\TerminalY.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\USER\\source\\repos\\TerminalY\\TerminalY\\TerminalY.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\TerminalY\\TerminalY\\TerminalY.csproj",
-        "projectName": "TerminalY",
-        "projectPath": "C:\\Users\\USER\\source\\repos\\TerminalY\\TerminalY\\TerminalY.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\source\\repos\\TerminalY\\TerminalY\\obj\\",
-=======
     "C:\\Users\\Mali\\Desktop\\TerminalY\\TerminalY\\TerminalY.csproj": {}
   },
   "projects": {
@@ -25,17 +12,12 @@
         "projectPath": "C:\\Users\\Mali\\Desktop\\TerminalY\\TerminalY\\TerminalY.csproj",
         "packagesPath": "C:\\Users\\Mali\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Mali\\Desktop\\TerminalY\\TerminalY\\obj\\",
->>>>>>> b9dd6da296bbfe4074c920eb92c341e8adb19b65
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
           "C:\\Users\\Mali\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> b9dd6da296bbfe4074c920eb92c341e8adb19b65
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -95,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

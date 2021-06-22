@@ -16,10 +16,9 @@
                             </li>
                         }
                     </ul>
-                    <div class="range-filter">
-                        <input type="range" min="0" max="1000" value="50" class="slider" id="myRange">
-                        <input type="text" name="minamount" id="minamount">
-                        <input type="text" name="maxamount" id="maxamount">
+                    <div class="slider-container">
+                        <input type="range" min="0" max="1000" value="1000" class="slider" id="myRange">
+                        <p>Value: <span id="slider-value">1000$</span></p>
                         <button id="filter-btn" class="site-btn">Filter</button>
                     </div><!-- / range-filter -->
                 </div>
@@ -61,8 +60,8 @@
         <div class="col-lg-4 col-sm-6">
             <div class="product-item">
                 <div class="pi-pic">
-                    <a href="/Products/ProductDetails/${id}">
-                        <img src="data:image/png;base64,${image}" alt="${name}">
+                    <a href="/Products/Details/${id}">
+                        <img src="${image}" alt="${name}" height="350" width="250">
                     </a>
                 </div>
                 <div class="pi-text">

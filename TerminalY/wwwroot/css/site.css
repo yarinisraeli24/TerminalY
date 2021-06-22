@@ -1057,3 +1057,8 @@ ul {
 .container{
     height: 50px;
 }
+
+#myRange{
+    padding: 0;
+
+}

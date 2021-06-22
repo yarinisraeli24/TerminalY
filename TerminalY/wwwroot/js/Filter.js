@@ -17,6 +17,7 @@ $('.site-btn').on('click', function (Model) {
         },
         dataType: "JSON",
         success: function (data) {
+            $('#tbody').empty();
             $('#results').tmpl(data).appendTo('#tbody');
         },
         error: function (data) {
@@ -25,5 +26,8 @@ $('.site-btn').on('click', function (Model) {
         },
 
     });
+});
 
+$(document).on('input change', '#myRange', function () {
+    $('#slider-value').html($(this).val());
 });
