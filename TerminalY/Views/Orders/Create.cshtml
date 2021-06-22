@@ -76,13 +76,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cf-title">Payment</div>
-                    <ul class="payment-list">
+                    <div class="cf-title">Payment:</div>
+                    <ul class="payment-list" >
                         <li>Paypal<a href="#"><img src="~/img/paypal.png" alt=""></a></li>
                         <li>Credit / Debit card<a href="#"><img src="~/img/mastercart.png" alt=""></a></li>
                         <li>Pay when you get the package</li>
                     </ul>
-                    <button class="site-btn submit-order-btn">Place Order</button>
+                    <button class="site-btn submit-order-btn">Submit</button>
                 </form>
             </div>
             <div class="col-lg-4 order-1 order-lg-2">
@@ -90,7 +90,7 @@
                     <h3>Your Cart</h3>
                     @if (cart != null)
                     {
-                        <ul class="product-list">
+                        <ul class="product-list" style="list-style-type:none;">
 
                             @foreach (var item in cart.CartItems)
                             {
@@ -112,8 +112,8 @@
                             }
 
                         </ul>
-                        <ul class="price-list">
-                            <li class="total">Total<span>$@cart.TotalPrice,00</span></li>
+                        <ul class="price-list" style="list-style-type:none;">
+                            <li class="total">Total<span> $@cart.TotalPrice,00</span></li>
                         </ul>
                     }
                 </div>
