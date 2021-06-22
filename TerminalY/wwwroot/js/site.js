@@ -2,7 +2,6 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
-
 $("form#AddProductToCart").submit(function (event) {
     event.preventDefault()
     var product = $('#productId').val();
@@ -109,5 +108,4 @@ $('.trash').on('click', function () {
         },
     });
 });
-
 

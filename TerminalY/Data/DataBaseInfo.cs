@@ -30,6 +30,21 @@ namespace TerminalY.Data
                 return;
             }
 
+
+            var branches = new Branches[]
+            {
+                new Branches{Country = "Israel", Address="Rishon-LeZion", latitude = "31.9635712", longitude = "34.8101149"},
+                new Branches{Country = "Israel", Address="Hod-Hasharon", latitude = "32.1561974", longitude = "34.8930354"},
+                new Branches{Country = "Israel", Address="Tel-Aviv", latitude = "32.0852997", longitude = "34.7818064"},
+                new Branches{Country = "Israel", Address="Herzliya", latitude = "32.1656255", longitude = "34.8469023"},
+            };
+
+            foreach (Branches b in branches)
+            {
+                context.Branches.Add(b);
+            }
+            context.SaveChanges();
+
             var categories = new Category[]
             {
                 new Category{Name = "Shorts"},

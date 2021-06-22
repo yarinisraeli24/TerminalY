@@ -1,15 +1,32 @@
-﻿@model TerminalY.Models.Admin
+﻿@model TerminalY.Models.Order
 
 @{
     Layout = "_LayoutAdmin";
     ViewData["Title"] = "Admin";
 }
 
-<div id="myMap" style='position:relative;width:600px;height:400px;'></div>
+<div id="myMap" style='position: relative; width: 1000px; height: 400px;position:center;'></div>
 <script type='text/javascript'>
-    function GetMap() {
-        var map = new Microsoft.Maps.Map('#myMap');
 
-        //Add your post map load code here.
+    function GetMap() {
+        var map = new Microsoft.Maps.Map('#myMap', {
+            zoom: 10
+        });
+        fetch('getAllBranches')
+            .then(response => response.json())
+            .then(data => {
+                for (var key in data) {
+                    const location = new Microsoft.Maps.Location(data[key].latitude, data[key].longitude)
+                    var pin = new Microsoft.Maps.Pushpin(location, {
+                        title: 'Terminal Y',
+                        subTitle: 'Branch: ' + data[key].address,
+                        text: '1'
+                    });
+                    //Add the pushpin to the map
+                    map.entities.push(pin);
+                }
+            }
+        );
     }
+        //Add your post map load code here.
 </script>

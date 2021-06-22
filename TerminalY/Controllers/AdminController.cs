@@ -1162,5 +1162,12 @@ namespace TerminalY.Controllers
         {
             return View();
         }
+        public async Task<IActionResult> getAllBranches()
+        {
+            var query = from b in _context.Branches select b;
+
+            return Json(await query.ToListAsync());
+
+        }
     }
 }

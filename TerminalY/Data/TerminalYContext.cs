@@ -32,5 +32,7 @@ namespace TerminalY.Data
         public DbSet<TerminalY.Models.Order> Order { get; set; }
 
         public DbSet<TerminalY.Models.OrderItem> OrderItem { get; set; }
+
+        public DbSet<TerminalY.Models.Branches> Branches { get; set; }
     }
 }
