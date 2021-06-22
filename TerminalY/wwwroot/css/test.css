@@ -1,4 +1,8 @@
-﻿a.navbar-brand {
+﻿*{
+    margin:0;
+    padding:0;
+}
+a.navbar-brand {
     white-space: normal;
     text-align: center;
     word-break: break-all;
@@ -124,7 +128,7 @@ body {
 }
 
     .search_submit > i {
-        color: purple;
+        color: mediumpurple;
         outline: none;
     }
         .search_submit > i:hover {
@@ -728,7 +732,7 @@ ul {
 }
 
 .register-form {
-    border: 1px solid purple;
+    border: 1px solid mediumpurple;
     padding: 10px;
     box-shadow: 5px 5px 10px;
     width: 30%;
@@ -765,7 +769,7 @@ input {
     input[type="submit"] {
         border-radius: 100px;
         width: 45%;
-        background: purple;
+        background: mediumpurple;
         margin: auto;
     }
 
@@ -832,4 +836,14 @@ video{
     z-index:-1;
     margin:0;
     padding:0;
+}
+.multiple_column{
+    margin:2rem;
+    column-count:3;
+    column-rule:2px solid black;
+}
+.p_careers {
+    font-size: 20px;
+    margin-left: 0.5rem;
+    font-weight: 500;
 }
