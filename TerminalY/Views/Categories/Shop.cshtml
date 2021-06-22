@@ -9,29 +9,12 @@
                 <div class="filter-widget">
                     <h2 class="fw-title categories-header-shop">Categories</h2>
                     <ul class="categories-list">
-                        <li>
-                            <a href="#home"><span>Shorts</span></a>
-                        </li>
-                        <li>
-                            <a href="#anch1" data-scroll>
-                                <span>T-Shirts</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#anch2" data-scroll>
-                                <span>Tights</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#anch3" data-scroll>
-                                <span>Sleeveless</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#anch4" data-scroll>
-                                <span>Shoes</span>
-                            </a>
-                        </li>
+                        @foreach (var category in ViewBag.Categories)
+                        {
+                            <li>
+                                <a asp-action="Shop" asp-controller="Categories" asp-route-id="@category.Id">@category.Name</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
