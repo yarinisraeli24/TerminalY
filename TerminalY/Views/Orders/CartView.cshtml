@@ -9,7 +9,7 @@
                 @if (item.Product.Image != null)
                 {
                     string img = item.Product.Image;
-                    <img src="data:image/png;base64,@img" alt="No picture">
+                    <img src="@img" height="50px" width="50px">
                 }
                 else
                 {

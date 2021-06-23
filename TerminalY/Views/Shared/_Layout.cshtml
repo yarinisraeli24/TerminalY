@@ -48,7 +48,6 @@
                                     <div class="up-item">
                                         <div class="shopping-card">
                                             <i class="flaticon-bag icon"></i>
-                                            @*<span>0</span>*@
                                         </div>
                                         <a asp-action="Details" asp-controller="Carts" class="person-buttons">Shopping Cart</a> &nbsp; &nbsp;
                                     </div>
@@ -72,18 +71,10 @@
         </div>
         <nav class="main-navbar">
             <div class="container">
-                <!-- menu -->
                 <ul class="main-menu">
                     <li><a asp-action="Index" asp-controller="Home">Home</a></li>
                     <li>
                         <a asp-action="Shop" asp-controller="Categories" asp-route-id="1">Shop</a>
-                        <!--<ul class="sub-menu">-->
-                        @*<li><a href="#">Outdoors and Camping</a></li>
-                            <li><a href="#">Gadgets</a></li>
-                            <li><a href="#">Baby Essentials</a></li>
-                            <li><a href="#">Convenience</a></li>
-                            <li><a href="#">Sports Accessories</a></li>*@
-                        <!--</ul>-->
                     </li>
                     <li><a asp-action="Create" asp-controller="Contacts">Contact us</a></li>
                     @{ var role = Context.User.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role)?.Value;
@@ -96,39 +87,19 @@
             </div>
         </nav>
     </header>
-    <!--   <header class="header-section">
-           <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <div class="container-fluid">
-                   <i class="logo fas fa-dumbbell"></i>
-                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                       <span class="navbar-toggler-icon"></span>
-                   </button>
-                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                       <form class="d-flex">
-                           <input class="form-control me-2 search_input" type="search" placeholder="Search" aria-label="Search">
-                           <button class="btn search_submit" type="submit"><i class="material-icons" style="font-size:20px;">search</i></button>
-                       </form>
-                   </div>
-                   <a href="#" class="sign_in"><i class="fas fa-user-circle"></i></a>
-               </div>
-           </nav>
-       </header>
-        -->
-
-    @RenderBody()
+    <div class="body-wrapper">
+        @RenderBody()
+    </div>
 
 
     <section class="footer-section">
         <div class="container">
             <div class="footer-logo text-center">
                 <a asp-action="Index" asp-controller="Home">
-                    <!--     <div class="footer-logo">
-                         <i class="fas fa-dumbbell logo icon"></i>
-                         <span>TerminalY</span>
-                     </div> -->
+
                 </a>
             </div>
-            <div class="row">
+            <aside class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="footer-widget about-widget">
                         <a asp-action="AboutUs" asp-controller="Home" class="footer-but">About us</a>
@@ -153,7 +124,7 @@
                         <div class="fb-like" data-href="https://www.facebook.com/Terminal-Y-100958118910653/?ref=pages_you_manage" data-width="" data-layout="standard" data-action="recommend" data-size="large" data-share="true"></div>
                     </div>
                 </div>
-            </div>
+            </aside>
         </div>
     </section>
 

@@ -578,7 +578,6 @@ C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Co
 C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Contacts\Details.cshtml.g.cs
 C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Contacts\Edit.cshtml.g.cs
 C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Contacts\Index.cshtml.g.cs
-C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
 C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\OrderItems\Create.cshtml.g.cs
 C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\OrderItems\Delete.cshtml.g.cs
 C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\OrderItems\Details.cshtml.g.cs
@@ -868,3 +867,9 @@ C:\Users\Mali\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Branches\
 C:\Users\Mali\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Branches\Details.cshtml.g.cs
 C:\Users\Mali\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Branches\Edit.cshtml.g.cs
 C:\Users\Mali\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Branches\Index.cshtml.g.cs
+C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Map.cshtml.g.cs
+C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Branches\Create.cshtml.g.cs
+C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Branches\Delete.cshtml.g.cs
+C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Branches\Details.cshtml.g.cs
+C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Branches\Edit.cshtml.g.cs
+C:\Users\97254\Desktop\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Branches\Index.cshtml.g.cs

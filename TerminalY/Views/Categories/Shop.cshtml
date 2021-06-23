@@ -37,10 +37,12 @@
                                         }
                                     </a>
                                 </div>
-                                <div class="pi-text">
+                                <div class="product-text">
                                     <a asp-action="Details" asp-controller="Products" asp-route-id="@product.Id">
-                                        <h6>$@Html.DisplayFor(model => product.Price),00</h6>
-                                        <p>@Html.DisplayFor(model => product.Name)</p>
+                                        <div class="row">
+                                            <p class="col-8">@Html.DisplayFor(model => product.Name)</p>
+                                            <h6 class="col-4">$@Html.DisplayFor(model => product.Price),00</h6>
+                                        </div>
                                     </a>
                                 </div>
                             </div>

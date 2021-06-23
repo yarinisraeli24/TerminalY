@@ -79,7 +79,6 @@ namespace TerminalY.Controllers
 
         public async Task<IActionResult> Create([Bind("Id,Country,City,Address,PostalCode,PhoneNumber,TotalPrice,Delivery,OrderTime")] Order order)
         {
-
             var user = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
             if (user == null)
             {

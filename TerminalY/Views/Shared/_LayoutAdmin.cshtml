@@ -48,7 +48,6 @@
                                     <div class="up-item">
                                         <div class="shopping-card">
                                             <i class="flaticon-bag icon"></i>
-                                            @*<span>0</span>*@
                                         </div>
                                         <a asp-action="Details" asp-controller="Carts">Shopping Cart</a> &nbsp; &nbsp;
                                     </div>
@@ -72,18 +71,10 @@
         </div>
         <nav class="main-navbar">
             <div class="container">
-                <!-- menu -->
                 <ul class="main-menu">
                     <li><a asp-action="Index" asp-controller="Home">Home</a></li>
                     <li>
                         <a asp-action="Shop" asp-controller="Categories" asp-route-id="1">Shop</a>
-                        <!--<ul class="sub-menu">-->
-                        @*<li><a href="#">Outdoors and Camping</a></li>
-                        <li><a href="#">Gadgets</a></li>
-                        <li><a href="#">Baby Essentials</a></li>
-                        <li><a href="#">Convenience</a></li>
-                        <li><a href="#">Sports Accessories</a></li>*@
-                        <!--</ul>-->
                     </li>
                     <li><a asp-action="AboutUs" asp-controller="Home">About us</a></li>
                     <li><a asp-action="Contact" asp-controller="Contacts">Contact us</a></li>
@@ -96,48 +87,30 @@
                 </ul>
             </div>
         </nav>
-
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a asp-action="Tables" asp-controller="Admin">
-                    <i class="fas fa-table"></i>Tables
-                </a>
-            </li>
-            <li class="nav-item">
-                <a asp-action="Charts" asp-controller="Admin">
-                    <i class="fas fa-chart-bar"></i>Charts
-                </a>
-            </li>
-            <li class="nav-item">
-                <a asp-action="Map" asp-controller="Admin">
-                    <i class="fas fa-map-marked-alt"></i>Map
-                </a>
-            </li>
-        </ul>
-
     </header>
-    <!--   <header class="header-section">
-           <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <div class="container-fluid">
-                   <i class="logo fas fa-dumbbell"></i>
-                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                       <span class="navbar-toggler-icon"></span>
-                   </button>
-                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                       <form class="d-flex">
-                           <input class="form-control me-2 search_input" type="search" placeholder="Search" aria-label="Search">
-                           <button class="btn search_submit" type="submit"><i class="material-icons" style="font-size:20px;">search</i></button>
-                       </form>
-                   </div>
-                   <a href="#" class="sign_in"><i class="fas fa-user-circle"></i></a>
-               </div>
-           </nav>
-       </header>
-        -->
-    <div class="container">
-        <main role="main" class="body-wrapper pb-3">
-            @RenderBody()
-        </main>
+    <div class="row page-wrapper">
+            <ul class="nav col-12">
+                <li class="nav-item">
+                    <a asp-action="Tables" asp-controller="Admin" class="admin-pick">
+                        <i class="fas fa-table"></i> Tables
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a asp-action="Charts" asp-controller="Admin" class="admin-pick">
+                        <i class="fas fa-chart-bar"></i> Charts
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a asp-action="Map" asp-controller="Admin" class="admin-pick">
+                        <i class="fas fa-map-marked-alt"></i> Map
+                    </a>
+                </li>
+            </ul>
+        <div class="container col-12">
+            <main role="main" class="body-wrapper pb-3 ">
+                @RenderBody()
+            </main>
+        </div>
     </div>
 </body>
 </html>

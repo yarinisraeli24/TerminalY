@@ -3,10 +3,7 @@
 }
 
 <div class="home_main_container container">
-    <div class="home_main_buttons">
-        <button class="shop_men btn-light gender_btn btn">Men<a asp-action="Shop" asp-controller="Categories" asp-route-id="1"></a></button>
-        <button class="shop_women btn-light gender_btn btn">Women<a asp-action="Shop" asp-controller="Categories" asp-route-id="1"></a></button>
-    </div>
+    <a asp-action="Shop" asp-controller="Categories" asp-route-id="1"><h1 class="main-header-home">Start your journey here .</h1></a>
     <video autoplay muted loop id="myVideo">
 
         <source src="./css/video.mp4" type="video/mp4" >

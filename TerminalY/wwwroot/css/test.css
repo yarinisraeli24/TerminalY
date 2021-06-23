@@ -8,7 +8,12 @@ a.navbar-brand {
     word-break: break-all;
 }
 a {
-    color: #0366d6;
+    color: black;
+}
+
+a:hover, a::after, a::before{
+    color: mediumpurple;
+    text-decoration: none;
 }
 
 .btn-primary {
@@ -23,10 +28,7 @@ a {
 }
 
 .body-wrapper {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    position: relative;
+    height: 100%;
 }
 
 .icon:hover {
@@ -63,9 +65,9 @@ html {
 }
 body {
     font-weight: 400;
-    background-image: url("bodyBACK1.jpg");
-    background-size: 100% 100%;
-    /* Margin bottom by footer height */
+    background-image: url("bodyBACK4.jpg");
+    background-size: 25% 100%;
+/**/    /* Margin bottom by footer height */
 }
 
 .footer {
@@ -82,9 +84,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-/*    background-image: url("BACK.png");
-*/    background-size: 100% 100%;
+    background-size: 100% 100%;
 }
+
 .home_main_buttons {
     margin-top: 47vh;
     width: 70vh;
@@ -94,7 +96,7 @@ body {
 .gender_btn {
     width: 24vh;
     height: 8vh;
-    background-color: white;
+    background-color: whitesmoke;
     color: mediumpurple;
     border: none;
     border-radius: 1000px;
@@ -232,7 +234,6 @@ body {
     margin-right: 2rem;
     text-decoration: none;
 }
-
 /*cards*/
 .shopping-card {
     display: inline-block;
@@ -352,6 +353,8 @@ main-menu ul {
 .footer-section {
     background: #282828;
     margin:0;
+    bottom: 0;
+    position: static;
 }
 
 .footer-logo {
@@ -551,6 +554,7 @@ main-menu ul {
 
 /* --------------
   Other Pages
+
 ------------------*/
 
 .page-top-info {
@@ -654,7 +658,7 @@ ul {
     align-items:center;
     width:100%;
     height:100vh;
-    background-image:url("../css/footerBACK1.png");
+    background-image:url("../css/footerBACK.jpg");
     background-size:100% 100%;
 }
 .footer-description {
@@ -662,12 +666,12 @@ ul {
     font-size: 1.5rem;
     font-weight: 600;
     width: 80%;
-    text-shadow: 2px 2px 5px white;
+    text-shadow: 1px 1px 2px white;
 }
 .footer-header {
     font-weight: 900;
     margin: 5rem auto;
-    text-shadow: 2px 2px 5px white;
+    text-shadow: 1px 1px 2px white;
 }
 .logo-name-top{
     font-weight:600;
@@ -686,12 +690,10 @@ ul {
 }
 .cart-section {
     width: 100%;
-    height: 100vh;
     margin: 2rem;
 }
 .product-section {
     width: 100%;
-    height: 100vh;
     margin: 2rem;
 }
 .footer-logo text-center{
@@ -829,7 +831,6 @@ label {
     }
 
 .table-title {
-    margin-top: 4rem;
     text-align: center;
     color: mediumpurple;
 }
@@ -850,7 +851,7 @@ video{
     font-size: 20px;
     margin-left: 0.5rem;
     font-weight: 500;
-    text-shadow: 2px 2px 5px white;
+    text-shadow: 1px 1px 2px white;
 }
 
 /*cart*/
@@ -878,21 +879,184 @@ video{
     display: flex;
     align-items: center;
 }
-.order-1{
-    margin:2rem auto;
-}
+
+
 .form-control{
     margin-bottom:0.5rem;
-
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid black;
+    background-color: whitesmoke;
 }
-.submit-order-btn{
-    padding:0.5rem 1rem;
-    background-color:mediumpurple;
-    color:white;
-    border:none;
-    border-radius:80px;
+.site-btn {
+    padding: 0.5rem 1rem;
+    background-color: mediumpurple;
+    color: white;
+    border: none;
+    border-radius: 80px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+    .site-btn:hover{
+        color: white;
+    }
+
+    .form-control {
+        margin-top: 2rem;
+    }
+
+.main-header-home {
+    font-size: 5rem;
+    font-weight: 800;
+    color: white;
+    margin-top: 20%;
+    text-shadow: 4px 4px 1px black;
+    cursor: pointer;
+}
+    .main-header-home:hover {
+        text-shadow: 4px 4px 1px mediumpurple;
+    }
+
+    .product-text{
+        color: mediumpurple;
+    }
+
+.categories-list, .register-form {
+    background-color: whitesmoke;
+}
+.table {
+    background-color: white;
+}
+.quantity p{
+    text-align: center;
+}
+.quantity input {
+    border: 1px solid black;
+    border-radius: 50px;
+    text-decoration: none; 
+    height: 80%;
+    width: 60%;
+    margin: 0;
 }
 
-.form-control{
+.product-decription{
+    margin: 3rem 0;
+}
+
+.add-container {
     margin-top: 2rem;
+}
+
+.product-col {
+    background-color: whitesmoke;
+    margin: 1rem 0;
+}
+
+.product-th, .quy-th, .total-th, .delete-th{
+
+    margin: 1rem 0;
+}
+.trash{
+    color: black;
+    border: none;
+}
+
+.trash:hover{
+    color: red;
+}
+
+.quantity-btn {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.quantity-btn:hover{
+    cursor: pointer;
+}
+
+.product-wrapper {
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 10px;
+}
+
+.pc-title, .quy-col, .total-col, .delete-col {
+    display: flex;
+    align-items: center;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+}
+
+.nav-btn a{
+    margin: 0.5rem;
+}
+
+
+.total-container {
+    margin: 2rem 0;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.product-list{
+    margin: 2rem 0;
+}
+
+
+.billing-warpper {
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 10px;
+    padding: 1rem;
+}
+
+.payment-list{
+    list-style: none;
+}
+
+.billing-form {
+    width: 80%;
+}
+
+.jumbotron{
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+.table-header {
+    width: 100%;
+}
+
+.delievery-info {
+    margin-top: 2rem;
+}
+
+table{
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    text-align:center;
+}
+
+.nav-item{
+    margin:3rem;
+}
+
+.page-wrapper{
+    display: flex;
+    align-items: center;
+}
+.admin-pick{
+    font-size:1.5rem;
+}
+.map-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }

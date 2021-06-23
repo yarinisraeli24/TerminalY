@@ -6,71 +6,79 @@
 
 <section class="cart-section spad">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
+        <div>
+            <div>
                 <div class="cart-table">
                     <h3>Your Cart</h3>
                     <div class="cart-table-warp">
                         <form id="delete-form"></form>
                         <table>
                             <thead>
-                                <tr>
-                                    <th class="product-th">Product</th>
-                                    <th class="quy-th">Quantity</th>
-                                    <th class="total-th">Price</th>
+                                <tr class="row">
+                                    <th class="product-th col-7">Product</th>
+                                    <th class="quy-th col-2">Quantity</th>
+                                    <th class="total-th col-2">Price</th>
+                                    <th class="delete-th col-1">Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
+                            @if (Model.CartItems.Count != 0)
+                            {
                                 @foreach (var item in Model.CartItems)
                                 {
-                                    <tr id="@item.Id">
-                                        <td class="product-col">
-                                            @if (item.Product.Image != null)
-                                            {
-                                                string img = item.Product.Image;
-                                                <img src="@img" alt="No picture" class="cart-image">
-                                            }
-                                            else
-                                            {
-                                                <img src="~/img/cart/1.jpg" alt="No picture">
-                                            }
-                                            <div class="pc-title">
-                                                <h4>@item.Product.Name</h4>
-                                                <p>$@item.Product.Price,00</p>
-                                            </div>
-                                        </td>
-                                        <td class="quy-col">
-                                            <div class="quantity">
-                                                <div class="pro-qty">
-                                                    <a class="dec qtybtn">-</a>
-                                                    <input type="text" class="qu-col" value="@item.Quantity" onfocus="this.oldvalue = this.value;" oninput="onChangefun(this, @item.Id);this.oldvalue = this.value;">
-                                                    <a class="inc qtybtn">+</a>
+                                    <tr id="@item.Id" class="row mt-3 product-wrapper">
+                                        <td class="col-7">
+                                            <div class="row">
+                                                @if (item.Product.Image != null)
+                                                {
+                                                    string img = item.Product.Image;
+                                                    <img src="@img" alt="No picture" width="100">
+                                                }
+                                                <div class="pc-title col-8">
+                                                    <div>
+                                                        <h4>@item.Product.Name</h4>
+                                                        <p>$@item.Product.Price,00</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="total-col"><h4>$@item.Price,00</h4></td>
-                                        <td>
-                                            <button class="trash btn-danger"><i class="fas fa-trash-alt" style="font-size: 24px"></i></button>
-                                            @*<input id="trash" form="delete-form" value="@item.Id" />
-                                                <a id="trash"><i class="fa fa-trash-o" style="font-size:24px"></i></a>*@
+                                        <td class="quy-col col-2">
+                                            <div class="quantity">
+                                                <div class="pro-qty row">
+                                                    <a class="dec quantity-btn col-3">-</a>
+                                                    <input type="text" class="qu-col col-4" value="@item.Quantity" onfocus="this.oldvalue = this.value;" oninput="onChangefun(this, @item.Id);this.oldvalue = this.value;">
+                                                    <a class="inc quantity-btn col-2">+</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="total-col col-2"><h4>$@item.Price,00</h4></td>
+                                        <td class="col-1 delete-col">
+                                            <button class="trash btn"><i class="fas fa-trash-alt" style="font-size: 24px;"></i></button>
                                         </td>
                                     </tr>
                                 }
+                            }
+                            else{
+                                <tr class="row product-wrapper">
+                                    <td class="col-12">
+                                        <h4 style="text-align:center;">There is not items in the cart.</h4>
+                                    </td>
+                                </tr>
+                             }
+
                             </tbody>
                         </table>
                     </div>
-                    <div class="total-cost">
-                        <h6>Total <span id="total_cost">$@Model.TotalPrice,00</span></h6>
-                    </div>
                 </div>
             </div>
-            <div class="col-lg-4 card-right">
-                @*<form class="promo-code-form">
-                        <input type="text" placeholder="Enter promo code">
-                        <button>Submit</button>
-                    </form>*@
-                <a asp-action="Create" asp-controller="Orders" class="site-btn">Proceed to checkout</a>
-                <a asp-action="Index" asp-controller="Home" class="site-btn sb-dark">Continue shopping</a>
+            <div class="total-container">
+                <div class="total-cost">
+                    <h6>Total <span id="total_cost">$@Model.TotalPrice,00</span></h6>
+                </div>
+                <div class="nav-btn">
+                    <a asp-action="Create" asp-controller="Orders" class="site-btn">Proceed to checkout</a>
+                    <a asp-action="Shop" asp-controller="Categories" class="site-btn sb-dark">Continue shopping</a>
+                </div>
             </div>
         </div>
     </div>
