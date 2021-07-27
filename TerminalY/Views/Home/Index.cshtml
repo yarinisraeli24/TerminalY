@@ -4,8 +4,30 @@
 
 <div class="home_main_container container">
     <a asp-action="Shop" asp-controller="Categories" asp-route-id="1"><h1 class="main-header-home">Start your journey here .</h1></a>
+    <div class="row city_degrees">
+        <div class="degree_card telaviv col-3">
+            <h3>Tel-Aviv</h3>
+            <span class="telaviv-degree"></span>
+        </div>
+        <div class="degree_card london col-3">
+            <h3>London</h3>
+            <span class="london-degree"></span>
+        </div>
+        <div class="degree_card newyork col-3">
+            <h3>New-York</h3>
+            <span class="newyork-degree"></span>
+        </div>
+        <div class="degree_card milano col-3">
+            <h3>Milano</h3>
+            <span class="milano-degree"></span>
+        </div>
+    </div>
+
     <video autoplay muted loop id="myVideo">
 
-        <source src="./css/video.mp4" type="video/mp4" >
+        <source src="./css/video.mp4" type="video/mp4">
     </video>
 </div>
+@section Scripts {
+    <script src="~/js/home.js"></script>
+}
