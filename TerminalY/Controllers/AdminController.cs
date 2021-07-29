@@ -84,6 +84,14 @@ namespace TerminalY.Controllers
             var DateResult = _context.Order.GroupBy(x => x.OrderTime.Date, x => x.Id)
                         .Select(x => new { Date = x.Key.ToShortDateString(), Count = x.Count() }).ToList();
             ViewBag.DateResult = DateResult;
+
+            var GenderOrders = (from c in _context.Contact
+                                join a in _context.Account
+                                on c.Email equals a.Username
+                                group c by a.Gender into c
+                                select new { c.Key,Total=c.Count()}).ToDictionary(x => x.Key, x => x.Total);
+            ViewBag.GenderOrders = GenderOrders;
+
             return View();
         }
 
