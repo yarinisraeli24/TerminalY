@@ -368,19 +368,6 @@ namespace TerminalY.Data
 
             context.SaveChanges();
 
-            var contacts = new Contact[]
-            {
-                new Contact{Name="shoval",Email="shoval@test.com",Body="hdcdscidcber",Subject="i love u"},
-                new Contact{Name="or",Email="or@test.com",Body="ovndrjncdkzsnckesd",Subject="yes"},
-                new Contact{Name="yrain",Email="yarin@test.com",Body="odnfksdnvifvn",Subject="qQSXJWQOSXJOISA"},
-                new Contact{Name="roy",Email="roy@test.com",Body="wusiwxhnsnxcdslxcnl",Subject="mfkvmweashjcv"}
-            };
-            foreach(Contact c in contacts)
-            {
-                context.Contact.Add(c);
-            }
-            context.SaveChanges();
-
             OrderItem[] orderItems = new OrderItem[]
                 {
                 new OrderItem{ Quantity=2, Product=products[0], Order=orders[0], Price=3455 },
