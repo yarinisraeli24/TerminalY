@@ -21,6 +21,14 @@
                 <h3 class="p-price">$@Html.DisplayFor(model => model.Price),00</h3>
                 <form id="AddProductToCart">
                     <input hidden id="productId" name="productId" type="text" value="@Model.Id">
+@*                    <div class="availabe row">
+                        <p class="col-2">Available in branches:</p>
+                        
+                        @foreach (var branch in Model.Branches)
+                           {
+                                <span>@branch.Address  </span>
+                           }
+                    </div> *@
                     <div class="quantity row">
                         <p class="col-2">Quantity</p>
                         <div class="col-4"><input id="quantity" name="quantity" type="text" value="1"></div>

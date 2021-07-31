@@ -46,7 +46,7 @@
                             <div class="col-6">
                                 <div class="cf-radio-btns">
                                     <div class="cfr-item">
-                                        <input asp-for="Delivery" class="form-control" type="radio" name="Delivery" id="ship-1" value="@delivery[0].Value">
+                                        <input asp-for="Delivery" class="form-control" checked="checked" type="radio" name="Delivery" id="ship-1" value="@delivery[0].Value">
                                         <label for="ship-1">Free</label>
                                         <span asp-validation-for="Delivery" class="text-danger"></span>
                                     </div>
@@ -111,6 +111,7 @@
 
                         </ul>
                         <ul class="price-list" style="list-style-type:none;">
+                 
                             <li class="total"><b>Total<span> $@cart.TotalPrice,00 </span></b></li>
                         </ul>
                     }
