@@ -912,7 +912,7 @@ namespace TerminalY.Controllers
                 return NotFound();
             }
 
-            return View("~/Views/Admin/Carts/Details.cshtml", cart);
+            return View("~/Views/Carts/Details.cshtml", cart);
         }
         // GET: Carts/Create
         public IActionResult CartCreate()
@@ -942,58 +942,6 @@ namespace TerminalY.Controllers
             return View("~/Views/Admin/Carts/Create.cshtml", cart);
         }
 
-        // GET: Carts/Edit/5
-        public async Task<IActionResult> CartEdit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var cart = await _context.Cart.FindAsync(id);
-            if (cart == null)
-            {
-                return NotFound();
-            }
-            ViewData["AccountId"] = new SelectList(_context.Account, "Id", "Id", cart.AccountId);
-            return View("~/Views/Admin/Carts/Edit.cshtml", cart);
-        }
-
-        // POST: Carts/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CartEdit(int id, [Bind("Id,AccountId")] Cart cart)
-        {
-            if (id != cart.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(cart);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!CartExists(cart.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Tables));
-            }
-            ViewData["AccountId"] = new SelectList(_context.Account, "Id", "Id", cart.AccountId);
-            return View("~/Views/Admin/Carts/Edit.cshtml", cart);
-        }
 
         // GET: Carts/Delete/5
         public async Task<IActionResult> CartDelete(int? id)

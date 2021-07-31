@@ -74,7 +74,6 @@
                     <li>
                         <a asp-action="Shop" asp-controller="Categories" asp-route-id="1">Shop</a>
                     </li>
-                    <li><a asp-action="AboutUs" asp-controller="Home">About us</a></li>
                     <li><a asp-action="Contact" asp-controller="Contacts">Contact us</a></li>
                     @{ var role = Context.User.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role)?.Value;
                         if (role == "Admin")

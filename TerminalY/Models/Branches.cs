@@ -12,5 +12,6 @@ namespace TerminalY.Models
         public string Address { get; set; }
         public string latitude { get; set; }
         public string longitude { get; set; }
+        public List<Product> products { get; set; }
     }
 }

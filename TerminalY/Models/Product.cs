@@ -21,5 +21,6 @@ namespace TerminalY.Models
         public DateTime Created { get; set; }
         [DisplayName("Image File")]
         public String Image { get; set; }
+        public List<Branches> Branches { get; set; }
     }
 }

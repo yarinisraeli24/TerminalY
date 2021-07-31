@@ -143,7 +143,6 @@ C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\View
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Carts\Create.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Carts\Delete.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Carts\Details.cshtml.g.cs
-C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Carts\Edit.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Carts\Index.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Categories\Create.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Categories\Delete.cshtml.g.cs
@@ -156,7 +155,6 @@ C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\View
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Contacts\Details.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Contacts\Edit.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Contacts\Index.cshtml.g.cs
-C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\OrderItems\Create.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\OrderItems\Delete.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\OrderItems\Details.cshtml.g.cs
@@ -878,3 +876,9 @@ C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Bran
 C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Branches\Details.cshtml.g.cs
 C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Branches\Edit.cshtml.g.cs
 C:\Users\USER\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Branches\Index.cshtml.g.cs
+C:\Users\Or Sharoni\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Map.cshtml.g.cs
+C:\Users\Or Sharoni\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Branches\Create.cshtml.g.cs
+C:\Users\Or Sharoni\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Branches\Delete.cshtml.g.cs
+C:\Users\Or Sharoni\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Branches\Details.cshtml.g.cs
+C:\Users\Or Sharoni\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Branches\Edit.cshtml.g.cs
+C:\Users\Or Sharoni\Source\Repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Branches\Index.cshtml.g.cs

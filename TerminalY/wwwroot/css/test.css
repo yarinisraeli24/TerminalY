@@ -1069,10 +1069,16 @@ table{
 .remember-fild input {
     width: auto;
     margin: 0;
-}`
+}
 .row.city_degrees {
     z-index: 5;
-    width: 100%;
-    height: 150px;
-    background-color: white;
+    justify-content: space-between;
+    width: 80%;
+    height: 100vh;
+    margin-top: 90px;
+    margin-left: 88px;
+}
+
+.city {
+    margin-left: 40px;
 }
