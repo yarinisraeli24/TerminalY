@@ -138,7 +138,6 @@ C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\View
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\CartItems\Create.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\CartItems\Delete.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\CartItems\Details.cshtml.g.cs
-C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\CartItems\Edit.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\CartItems\Index.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Carts\Create.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Carts\Delete.cshtml.g.cs
@@ -158,7 +157,6 @@ C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\View
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\OrderItems\Create.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\OrderItems\Delete.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\OrderItems\Details.cshtml.g.cs
-C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\OrderItems\Edit.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\OrderItems\Index.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Orders\Create.cshtml.g.cs
 C:\Users\Or Sharoni\source\repos\TerminalY\TerminalY\obj\Debug\net5.0\Razor\Views\Admin\Orders\Delete.cshtml.g.cs
