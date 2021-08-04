@@ -2,7 +2,6 @@
 $('.site-btn').on('click', function (Model) {
     var min = "0";
     var max = $('#myRange').val().toString();
-    console.log(min,max);
 
     var cat = location.href.substr(location.href.lastIndexOf('/') + 1);
 
@@ -22,7 +21,6 @@ $('.site-btn').on('click', function (Model) {
         },
         error: function (data) {
             alert("Noo");
-            console.log(data);
         },
 
     });
