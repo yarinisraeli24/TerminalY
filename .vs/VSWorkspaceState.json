@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\TerminalY",
+    "\\TerminalY\\Data"
   ],
   "SelectedNode": "\\TerminalY.sln",
   "PreviewInSolutionExplorer": false

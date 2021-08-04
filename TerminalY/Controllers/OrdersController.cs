@@ -120,8 +120,8 @@ namespace TerminalY.Controllers
                 ViewData["Message"] = orderID;
                 return View("Ordered");
             }
-
-            return View(order);
+            ViewData["cart_to_view"] = cart;
+            return View();
         }
 
         // GET: Orders/Edit/5
